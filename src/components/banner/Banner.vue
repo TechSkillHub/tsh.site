@@ -5,13 +5,12 @@
   </div>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 .banner {
-  h1, h3 {
+  h1,
+  h3 {
     text-align: center;
   }
   h1 {
