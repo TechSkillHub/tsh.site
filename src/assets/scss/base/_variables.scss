@@ -1,0 +1,28 @@
+// Colors defaults
+$white: #ffffff;
+$black: #000;
+
+//Color Greys
+$grey-1: #d9dadb;
+$grey-2: #6d6e71;
+$grey-3: #414042;
+$grey-4: #231f20;
+
+//alertas
+$error: #ff0000;
+$success: #009b4e;
+$alert: #f09924;
+$disabled: rgba(255, 255, 255, 0.5);
+
+// Theme
+$primary: #008b8b;
+$secondary: #461bff;
+
+// Responsive
+$breakpoints: (
+  sm: 480px,
+  md: 768px,
+  lg: 1040px,
+  xxl: 1440px,
+  hd: 1920px
+);

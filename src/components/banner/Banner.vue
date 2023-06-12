@@ -16,5 +16,8 @@
   h1 {
     font-size: 200px;
   }
+  h3 {
+    font-size: 30px;
+  }
 }
 </style>
