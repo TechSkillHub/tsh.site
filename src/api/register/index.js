@@ -6,7 +6,7 @@ export default class Register {
   register(data) {
     return new Promise((resolve, reject) => {
       axios
-        .post(`${import.meta.env.VITE_APP_API_BASE}/user/create`, data)
+        .post(`${import.meta.env.VITE_APP_API_BASE}/user`, data)
         .then((resp) => {
           resolve(resp)
         })
