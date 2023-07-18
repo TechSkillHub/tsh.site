@@ -14,7 +14,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse" @click="hide()">
+        <div class="collapse navbar-collapse" id="navbarCollapse" @click="hideMenu()">
           <ul class="navbar-nav ms-auto mb-2 mb-md-0">
             <li class="nav-item">
               <router-link
@@ -48,8 +48,9 @@ export default {
     
   },
   methods: {
-    hide() {
-      this.$refs.navbar.click();
+    hideMenu() {
+      let el = document.getElementById("navbarCollapse");
+      el.classList.remove("show");
     }
   },
   computed: {
