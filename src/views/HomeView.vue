@@ -2,7 +2,7 @@
   <div
     class="scrollspy-example"
     data-bs-spy="scroll"
-    data-bs-target="#navbar"
+    data-bs-target="#header"
     data-bs-offset="0"
     tabindex="0"
   >

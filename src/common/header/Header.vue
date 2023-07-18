@@ -1,6 +1,6 @@
 <template>
-  <div class="fixed-top">
-    <nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div>
+    <nav id="header" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">LOGO</a>
         <button
@@ -10,11 +10,11 @@
           data-bs-target="#navbarCollapse"
           aria-controls="navbarCollapse"
           aria-expanded="false"
-          aria-label="Toggle navigation"
+          ref="navbar"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="collapse navbar-collapse" id="navbarCollapse" @click="hide()">
           <ul class="navbar-nav ms-auto mb-2 mb-md-0">
             <li class="nav-item">
               <router-link
@@ -44,19 +44,27 @@ export default {
   data() {
     return {}
   },
-  mounted() {},
-  methods: {},
+  mounted() {
+    
+  },
+  methods: {
+    hide() {
+      this.$refs.navbar.click();
+    }
+  },
   computed: {
     currentPage() {
       return this.$store.state.manager.currentPage
     }
+  },
+  watch: {
   }
 }
 </script>
 
 <style lang="scss" scoped>
-nav {
-  height: 70px;
+nav.navbar {
+  padding: 16px 0;
   a {
     &.active {
       &::after {
@@ -68,5 +76,13 @@ nav {
       }
     }
   }
+  .navbar-toggler {
+    outline: none;
+    border: none;
+    &:focus {
+      box-shadow: none;
+    }
+  }
 }
+
 </style>

@@ -46,6 +46,7 @@ export default {}
 #about {
   min-height: 100vh;
   background-color: $primary;
+  padding: 10px;
   h1 {
     font-size: 100px;
     color: $black;
