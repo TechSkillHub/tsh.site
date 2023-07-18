@@ -12,11 +12,8 @@
 </template>
 
 <script>
-// import Register from '../api/register/index'
-import Banner from '../components/banner/Banner.vue'
-import AboutUs from '@/components/aboutUs/index.vue'
-
-// const register = new Register()
+import Banner from '@/components/banner/Index.vue'
+import AboutUs from '@/components/aboutUs/Index.vue'
 
 export default {
   data() {
