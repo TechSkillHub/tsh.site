@@ -2,7 +2,11 @@
   <div>
     <nav id="header" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">LOGO</a>
+        <router-link 
+          class="navbar-brand" 
+          :to="{ name: 'home', hash: '#banner' }">
+          LOGO
+        </router-link>
         <button
           class="navbar-toggler"
           type="button"
