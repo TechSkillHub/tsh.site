@@ -1,8 +1,6 @@
 export default {
   namespaced: true,
-  state: {
-    title: 'Teste'
-  },
+  state: {},
   mutations: {},
   getters: {},
   actions: {}

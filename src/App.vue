@@ -1,9 +1,26 @@
 <template>
+  <Header />
   <RouterView />
+  <Footer />
 </template>
 
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
+<script>
+import Header from '@/common/header/Header.vue'
+import Footer from '@/common/footer/Footer.vue'
+import { RouterView } from 'vue-router'
+
+export default {
+  data() {
+    return {}
+  },
+  components: {
+    Header,
+    Footer
+  },
+  mounted() {}
+}
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import '@/assets/scss/main.scss';
+</style>

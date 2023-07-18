@@ -1,37 +1,40 @@
 <template>
-  <main class="container d-flex justify-content-center align-items-center">
-    <Banner/>
-  </main>
+  <div
+    class="scrollspy-example"
+    data-bs-spy="scroll"
+    data-bs-target="#navbar"
+    data-bs-offset="0"
+    tabindex="0"
+  >
+    <Banner id="banner" />
+    <AboutUs id="about" />
+  </div>
 </template>
 
 <script>
-import Register from '../api/register/index'
+// import Register from '../api/register/index'
 import Banner from '../components/banner/Banner.vue'
+import AboutUs from '@/components/aboutUs/index.vue'
 
-const register = new Register()
+// const register = new Register()
 
 export default {
   data() {
     return {}
   },
   components: {
-    Banner
-},
-  computed: {},
-  mounted() {
-    const data = {
-      name: 'Felipe',
-      email: 'teste@teste.com',
-      password: '123456'
-    }
-    register.register(data)
+    Banner,
+    AboutUs
   },
-  methods: {}
+  computed: {
+    currentPage() {
+      return this.$store.state.manager.currentPage
+    }
+  },
+  mounted() {},
+  methods: {},
+  watch: {}
 }
 </script>
 
-<style lang="scss" scoped>
-main {
-  height: 100vh;
-}
-</style>
+<style lang="scss" scoped></style>
