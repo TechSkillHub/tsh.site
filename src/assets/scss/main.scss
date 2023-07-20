@@ -1,6 +1,14 @@
+//Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+//Base
 @import './../scss/base/reset';
 @import './../scss/base/variables';
 @import './../scss/base/typography';
+
+//Layout
 @import './../scss/layout/global';
+
+//Components
 @import './../scss/components/forms';
+@import './../scss/components/modal';
