@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Loading from "@/common/loading/index.vue";
+import Loading from '@/common/loading/Loading.vue'
 import Header from '@/common/header/Header.vue'
 import Footer from '@/common/footer/Footer.vue'
 import { RouterView } from 'vue-router'
@@ -24,13 +24,13 @@ export default {
   },
   computed: {
     loading() {
-      return this.$store.state.manager.loading;
-    },
+      return this.$store.state.manager.loading
+    }
   },
   mounted() {
     setTimeout(() => {
-      this.$store.commit('manager/SET_LOADING', false);
-    }, 5000);
+      this.$store.commit('manager/SET_LOADING', false)
+    }, 5000)
   }
 }
 </script>

@@ -2,9 +2,7 @@
   <div>
     <nav id="header" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <div class="container">
-        <router-link 
-          class="navbar-brand" 
-          :to="{ name: 'home', hash: '#banner' }">
+        <router-link class="navbar-brand" :to="{ name: 'home', hash: '#banner' }">
           LOGO
         </router-link>
         <button
@@ -48,13 +46,11 @@ export default {
   data() {
     return {}
   },
-  mounted() {
-    
-  },
+  mounted() {},
   methods: {
     hideMenu() {
-      let el = document.getElementById("navbarCollapse");
-      el.classList.remove("show");
+      let el = document.getElementById('navbarCollapse')
+      el.classList.remove('show')
     }
   },
   computed: {
@@ -62,8 +58,7 @@ export default {
       return this.$store.state.manager.currentPage
     }
   },
-  watch: {
-  }
+  watch: {}
 }
 </script>
 
@@ -89,5 +84,4 @@ nav.navbar {
     }
   }
 }
-
 </style>

@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import Banner from '@/components/banner/Index.vue'
-import AboutUs from '@/components/aboutUs/Index.vue'
+import Banner from '@/components/banner/Banner.vue'
+import AboutUs from '@/components/aboutUs/AboutUs.vue'
 
 export default {
   data() {

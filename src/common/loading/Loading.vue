@@ -6,15 +6,13 @@
 <script>
 export default {
   data() {
-    return {
-
-    }
+    return {}
   },
   mounted() {
-    document.body.classList.add('scroll-hidden');
+    document.body.classList.add('scroll-hidden')
   },
   unmounted() {
-    document.body.classList.remove('scroll-hidden');
+    document.body.classList.remove('scroll-hidden')
   }
 }
 </script>
@@ -36,21 +34,21 @@ export default {
   width: 48px;
   height: 48px;
   display: block;
-  margin:15px auto;
+  margin: 15px auto;
   position: relative;
-  color: #FFF;
+  color: #fff;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
 .loader::after,
 .loader::before {
-  content: '';  
+  content: '';
   box-sizing: border-box;
   position: absolute;
   width: 24px;
   height: 24px;
   top: 0;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 50%;
   animation: scale50 1s infinite ease-in-out;
 }
@@ -68,13 +66,14 @@ export default {
   100% {
     transform: rotate(360deg);
   }
-} 
+}
 @keyframes scale50 {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(0);
   }
   50% {
     transform: scale(1);
   }
-} 
+}
 </style>

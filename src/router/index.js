@@ -5,7 +5,6 @@ import store from '../store'
 const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
     if (to.name == 'home') {
-      console.log(to.hash)
       return {
         el: to.hash,
         top: 70

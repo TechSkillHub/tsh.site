@@ -16,6 +16,7 @@ export default {
 
 <style lang="scss" scoped>
 #banner {
+  background-color: $black;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
