@@ -1,0 +1,12 @@
+button {
+  &.primary {
+    display: block;
+    background-color: $white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    max-width: fit-content;
+  }
+}

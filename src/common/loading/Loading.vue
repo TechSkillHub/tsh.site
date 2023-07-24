@@ -1,5 +1,5 @@
 <template>
-  <div class="loading">
+  <div class="mask">
     <span class="loader"></span>
   </div>
 </template>
@@ -17,19 +17,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.loading {
-  top: 0;
-  position: absolute;
-  position: fixed;
-  z-index: 99999999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(1px);
-}
 .loader {
   width: 48px;
   height: 48px;

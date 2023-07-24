@@ -1,4 +1,5 @@
 <template>
+  <Cookies />
   <transition name="fade" mode="out-in">
     <Loading v-if="loading" />
   </transition>
@@ -9,6 +10,7 @@
 
 <script>
 import Loading from '@/common/loading/Loading.vue'
+import Cookies from '@/common/cookies/Cookies.vue'
 import Header from '@/common/header/Header.vue'
 import Footer from '@/common/footer/Footer.vue'
 import { RouterView } from 'vue-router'
@@ -19,6 +21,7 @@ export default {
   },
   components: {
     Loading,
+    Cookies,
     Header,
     Footer
   },
@@ -31,7 +34,8 @@ export default {
     setTimeout(() => {
       this.$store.commit('manager/SET_LOADING', false)
     }, 5000)
-  }
+  },
+  watch: {}
 }
 </script>
 
