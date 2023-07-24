@@ -12,6 +12,7 @@
           data-bs-target="#navbarCollapse"
           aria-controls="navbarCollapse"
           aria-expanded="false"
+          id="buttonHeader"
         >
           <span class="navbar-toggler-icon"></span>
         </button>

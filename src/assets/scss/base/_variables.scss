@@ -19,11 +19,8 @@ $primary: #008b8b;
 $secondary: #461bff;
 
 // Responsive
-$breakpoints: (
-  sm: 480px,
-  md: 768px,
-  lg: 1040px,
-  xxl: 1440px,
-  hd: 1920px
-);
+$sm: 576px;
 $md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
