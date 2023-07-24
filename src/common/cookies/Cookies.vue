@@ -5,8 +5,6 @@
         <p class="text-justify col-12 col-md-9 col-lg-10 m-0">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis lacus eu turpis
           volutpat, in malesuada mauris sollicitudin. Donec vehicula molestie massa at pellentesque.
-          Praesent egestas enim ac eros rhoncus tristique. Aenean id felis at erat tristique
-          aliquam. Donec vitae consectetur massa, sit amet condimentum odio.
         </p>
         <div class="col-12 col-md-3 col-lg-2 d-flex">
           <button class="primary m-auto mt-4 my-md-auto me-md-0" @click="acceptCookies()">
@@ -54,7 +52,7 @@ export default {
   padding: 40px;
   p {
     text-align: justify;
-    color: $white;
+    font-weight: 500;
   }
 }
 </style>
