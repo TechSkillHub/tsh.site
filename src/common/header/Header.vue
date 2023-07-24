@@ -2,9 +2,7 @@
   <div>
     <nav id="header" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <div class="container">
-        <router-link class="navbar-brand" :to="{ name: 'home', hash: '#banner' }">
-          LOGO
-        </router-link>
+        <router-link class="navbar-brand" :to="{ path: '/' }"> LOGO </router-link>
         <button
           class="navbar-toggler"
           type="button"
@@ -20,7 +18,7 @@
           <ul class="navbar-nav ms-auto mb-2 mb-md-0">
             <li class="nav-item">
               <router-link
-                :to="{ name: 'home', hash: '#banner' }"
+                :to="{ path: '/', hash: '#banner' }"
                 class="nav-link"
                 :class="currentPage == '#banner' ? 'active' : ''"
                 >Home</router-link
@@ -28,7 +26,7 @@
             </li>
             <li class="nav-item">
               <router-link
-                :to="{ name: 'home', hash: '#about' }"
+                :to="{ path: '/', hash: '#about' }"
                 class="nav-link"
                 :class="currentPage == '#about' ? 'active' : ''"
                 >AboutUs</router-link
