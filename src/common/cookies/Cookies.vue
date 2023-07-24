@@ -54,6 +54,7 @@ export default {
   padding: 40px;
   p {
     text-align: justify;
+    color: $white;
   }
 }
 </style>

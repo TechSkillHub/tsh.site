@@ -2,7 +2,9 @@
   <div>
     <nav id="header" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <div class="container">
-        <router-link class="navbar-brand" :to="{ path: '/' }"> LOGO </router-link>
+        <router-link class="navbar-brand" :to="{ path: '/', hash: '#banner' }" @click="hideMenu()">
+          LOGO
+        </router-link>
         <button
           class="navbar-toggler"
           type="button"
@@ -10,7 +12,7 @@
           data-bs-target="#navbarCollapse"
           aria-controls="navbarCollapse"
           aria-expanded="false"
-          id="buttonHeader"
+          name="buttonHeader"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -64,6 +66,7 @@ export default {
 nav.navbar {
   padding: 16px 0;
   a {
+    width: fit-content;
     &.active {
       &::after {
         display: block;
@@ -80,6 +83,9 @@ nav.navbar {
     &:focus {
       box-shadow: none;
     }
+  }
+  .navbar-collapse ul {
+    padding-top: 20px;
   }
 }
 </style>
