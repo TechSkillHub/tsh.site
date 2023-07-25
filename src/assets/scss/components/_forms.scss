@@ -1,6 +1,21 @@
 button {
   &.primary {
     display: block;
+    background-color: $primary;
+    color: $white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    max-width: fit-content;
+    transition: ease-in-out 0.3s;
+    &:hover {
+      background-color: rgba($primary, 0.8);
+    }
+  }
+  &.secondary {
+    display: block;
     background-color: $white;
     padding: 10px 30px;
     border: none;

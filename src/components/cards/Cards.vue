@@ -18,7 +18,7 @@
 
           <h2 class="fw-normal mt-4">Lorem ipsum</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae.</p>
-          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+          <p><button class="primary m-auto" href="#">View details »</button></p>
         </div>
 
         <div class="col-lg-3 p-3">
@@ -37,7 +37,7 @@
 
           <h2 class="fw-normal mt-4">Lorem ipsum</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae.</p>
-          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+          <p><button class="primary m-auto" href="#">View details »</button></p>
         </div>
 
         <div class="col-lg-3 p-3">
@@ -56,7 +56,7 @@
 
           <h2 class="fw-normal mt-4">Lorem ipsum</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae.</p>
-          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+          <p><button class="primary m-auto" href="#">View details »</button></p>
         </div>
       </div>
     </div>
@@ -75,7 +75,6 @@ export default {
 <style lang="scss" scoped>
 #cards {
   background-color: $white;
-  color: $primary;
   h1 {
     font-size: 50px;
   }
