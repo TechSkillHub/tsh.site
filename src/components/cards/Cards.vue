@@ -1,10 +1,10 @@
 <template>
-  <div class="container-fluid d-flex align-itens-center py-5">
+  <div class="container-fluid d-flex align-itens-center py-3 py-md-5">
     <div class="container d-flex flex-column justify-content-center text-center">
       <div class="row justify-content-around">
-        <div class="col-lg-3 p-3">
+        <div class="col-lg-3 p-3 card my-3 my-md-0">
           <svg
-            class="bd-placeholder-img rounded-circle"
+            class="bd-placeholder-img rounded-circle mx-auto"
             width="140"
             height="140"
             xmlns="http://www.w3.org/2000/svg"
@@ -21,9 +21,9 @@
           <p><button class="primary m-auto" href="#">View details »</button></p>
         </div>
 
-        <div class="col-lg-3 p-3">
+        <div class="col-lg-3 p-3 card my-3 my-md-0">
           <svg
-            class="bd-placeholder-img rounded-circle"
+            class="bd-placeholder-img rounded-circle mx-auto"
             width="140"
             height="140"
             xmlns="http://www.w3.org/2000/svg"
@@ -40,9 +40,9 @@
           <p><button class="primary m-auto" href="#">View details »</button></p>
         </div>
 
-        <div class="col-lg-3 p-3">
+        <div class="col-lg-3 p-3 card my-3 my-md-0">
           <svg
-            class="bd-placeholder-img rounded-circle"
+            class="bd-placeholder-img rounded-circle mx-auto"
             width="140"
             height="140"
             xmlns="http://www.w3.org/2000/svg"
