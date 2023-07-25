@@ -37,6 +37,14 @@
             </li>
             <li class="nav-item">
               <router-link
+                :to="{ path: '/', hash: '#cards' }"
+                class="nav-link"
+                :class="currentPage == '#cards' ? 'active' : ''"
+                >Cards</router-link
+              >
+            </li>
+            <li class="nav-item">
+              <router-link
                 :to="{ path: '/', hash: '#about' }"
                 class="nav-link"
                 :class="currentPage == '#about' ? 'active' : ''"
