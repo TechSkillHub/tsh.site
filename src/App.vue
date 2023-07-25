@@ -31,9 +31,9 @@ export default {
     }
   },
   mounted() {
-    setTimeout(() => {
-      this.$store.commit('manager/SET_LOADING', false)
-    }, 5000)
+    // setTimeout(() => {
+    //   this.$store.commit('manager/SET_LOADING', false)
+    // }, 5000)
   },
   watch: {}
 }

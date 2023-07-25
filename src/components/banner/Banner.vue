@@ -3,8 +3,10 @@
     <div class="container d-flex flex-column justify-content-center text-center">
       <div class="row">
         <div class="col-12">
-          <h1>EM BREVE!</h1>
-          <h2>A melhor plataforma para conectar profissionais de tecnologia.</h2>
+          <h1>COMING SOON!</h1>
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+          <!-- <h1>EM BREVE!</h1>
+          <h2>A melhor plataforma para conectar profissionais de tecnologia.</h2> -->
         </div>
       </div>
     </div>

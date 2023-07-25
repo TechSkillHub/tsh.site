@@ -7,12 +7,14 @@
     tabindex="0"
   >
     <Banner id="banner" />
+    <Carousel id="carousel" />
     <AboutUs id="about" />
   </div>
 </template>
 
 <script>
 import Banner from '@/components/banner/Banner.vue'
+import Carousel from '@/components/carousel/Carousel.vue'
 import AboutUs from '@/components/aboutUs/AboutUs.vue'
 
 export default {
@@ -21,6 +23,7 @@ export default {
   },
   components: {
     Banner,
+    Carousel,
     AboutUs
   },
   computed: {

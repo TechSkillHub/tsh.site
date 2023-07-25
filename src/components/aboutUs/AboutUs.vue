@@ -48,7 +48,6 @@ export default {}
 
 <style lang="scss">
 #about {
-  min-height: 100vh;
   background-color: $primary;
   color: $white;
   h1 {

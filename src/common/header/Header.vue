@@ -12,7 +12,7 @@
           data-bs-target="#navbarCollapse"
           aria-controls="navbarCollapse"
           aria-expanded="false"
-          id="buttonHeader" 
+          id="buttonHeader"
           title="buttonHeader"
         >
           <span class="navbar-toggler-icon"></span>
@@ -25,6 +25,14 @@
                 class="nav-link"
                 :class="currentPage == '#banner' ? 'active' : ''"
                 >Home</router-link
+              >
+            </li>
+            <li class="nav-item">
+              <router-link
+                :to="{ path: '/', hash: '#carousel' }"
+                class="nav-link"
+                :class="currentPage == '#carousel' ? 'active' : ''"
+                >Carousel</router-link
               >
             </li>
             <li class="nav-item">
@@ -56,6 +64,7 @@ export default {
   },
   computed: {
     currentPage() {
+      console.log(this.$store.state.manager.currentPage)
       return this.$store.state.manager.currentPage
     }
   },
@@ -65,7 +74,7 @@ export default {
 
 <style lang="scss" scoped>
 nav.navbar {
-  padding: 16px 0;
+  padding: 17px 0;
   a {
     width: fit-content;
     &.active {
@@ -87,6 +96,9 @@ nav.navbar {
   }
   .navbar-collapse ul {
     padding-top: 20px;
+    @media (min-width: $md) {
+      padding-top: 0px;
+    }
   }
 }
 </style>
