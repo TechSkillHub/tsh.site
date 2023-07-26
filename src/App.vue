@@ -1,5 +1,8 @@
 <template>
   <Cookies />
+  <Transition>
+    <ModalDefault v-if="modalInfo.show" :modalInfo="modalInfo" />
+  </Transition>
   <transition name="fade" mode="out-in">
     <Loading v-if="loading" />
   </transition>
@@ -9,8 +12,9 @@
 </template>
 
 <script>
-import Loading from '@/common/loading/Loading.vue'
 import Cookies from '@/common/cookies/Cookies.vue'
+import ModalDefault from '@/common/modal/Default.vue'
+import Loading from '@/common/loading/Loading.vue'
 import Header from '@/common/header/Header.vue'
 import Footer from '@/common/footer/Footer.vue'
 import { RouterView } from 'vue-router'
@@ -20,14 +24,18 @@ export default {
     return {}
   },
   components: {
-    Loading,
     Cookies,
+    ModalDefault,
+    Loading,
     Header,
     Footer
   },
   computed: {
     loading() {
       return this.$store.state.manager.loading
+    },
+    modalInfo() {
+      return this.$store.state.manager.modalDefault
     }
   },
   mounted() {
@@ -41,4 +49,13 @@ export default {
 
 <style lang="scss">
 @import '@/assets/scss/main.scss';
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease-in;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 </style>

@@ -51,6 +51,9 @@
                 >AboutUs</router-link
               >
             </li>
+            <li class="nav-item">
+              <a @click="openModal()" class="nav-link">Modal</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -68,6 +71,13 @@ export default {
     hideMenu() {
       let el = document.getElementById('navbarCollapse')
       el.classList.remove('show')
+    },
+    openModal() {
+      this.$store.commit('manager/SET_MODAL_DEFAULT', {
+        show: true,
+        title: 'Title Modal',
+        body: 'Body Modal'
+      })
     }
   },
   computed: {
@@ -81,6 +91,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.scroll-hidden {
+  #header {
+    right: 17px;
+  }
+}
 nav.navbar {
   padding: 17px 0;
   a {
