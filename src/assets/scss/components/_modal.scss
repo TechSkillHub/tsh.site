@@ -1,7 +1,13 @@
 .scroll-hidden {
-  overflow: hidden;
-  padding-right: 17px;
-  width: 100vw;
+  overflow-y: hidden;
+  @media (min-width: $md) {
+    background-color: #f1f1f1;
+    width: 100vw;
+    padding-right: 17px;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .mask {

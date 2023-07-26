@@ -91,9 +91,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.scroll-hidden {
-  #header {
-    right: 17px;
+@media (min-width: $md) {
+  .scroll-hidden {
+    #header {
+      right: 17px;
+    }
   }
 }
 nav.navbar {
