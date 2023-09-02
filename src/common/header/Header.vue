@@ -2,8 +2,12 @@
   <div>
     <nav id="header" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <div class="container">
-        <router-link class="navbar-brand" :to="{ path: '/', hash: '#banner' }" @click="hideMenu()">
-          LOGO
+        <router-link
+          class="navbar-brand logo"
+          :to="{ path: '/', hash: '#banner' }"
+          @click="hideMenu()"
+        >
+          Tech Skill Hub
         </router-link>
         <button
           class="navbar-toggler"
@@ -29,18 +33,26 @@
             </li>
             <li class="nav-item">
               <router-link
+                :to="{ path: '/', hash: '#oportunity' }"
+                class="nav-link"
+                :class="currentPage == '#oportunity' ? 'active' : ''"
+                >Oportunidade</router-link
+              >
+            </li>
+            <!-- <li class="nav-item">
+              <router-link
                 :to="{ path: '/', hash: '#carousel' }"
                 class="nav-link"
                 :class="currentPage == '#carousel' ? 'active' : ''"
                 >Carousel</router-link
               >
-            </li>
+            </li> -->
             <li class="nav-item">
               <router-link
-                :to="{ path: '/', hash: '#cards' }"
+                :to="{ path: '/', hash: '#whyus' }"
                 class="nav-link"
-                :class="currentPage == '#cards' ? 'active' : ''"
-                >Cards</router-link
+                :class="currentPage == '#whyus' ? 'active' : ''"
+                >Por que a TSH?</router-link
               >
             </li>
             <li class="nav-item">
@@ -48,12 +60,12 @@
                 :to="{ path: '/', hash: '#about' }"
                 class="nav-link"
                 :class="currentPage == '#about' ? 'active' : ''"
-                >AboutUs</router-link
+                >Sobre Nós</router-link
               >
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a @click="openModal()" class="nav-link">Modal</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -82,7 +94,6 @@ export default {
   },
   computed: {
     currentPage() {
-      console.log(this.$store.state.manager.currentPage)
       return this.$store.state.manager.currentPage
     }
   },
@@ -100,6 +111,11 @@ export default {
 }
 nav.navbar {
   padding: 17px 0;
+  .logo {
+    font-family: 'Audiowide', cursive;
+    font-size: 28px;
+    color: $primary;
+  }
   a {
     width: fit-content;
     &.active {

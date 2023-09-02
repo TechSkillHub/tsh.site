@@ -17,7 +17,7 @@ const router = createRouter({
     if (to.hash) {
       return {
         el: to.hash,
-        top: 70
+        top: 80
       }
     }
   },

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 py-4">
-          <h1>About Us</h1>
+          <h1>Sobre Nós</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non lorem at risus semper
             molestie. Donec maximus pellentesque augue, quis porta dui consequat ut. Nullam nulla
@@ -51,13 +51,10 @@ export default {}
   background-color: $primary;
   color: $white;
   h1 {
-    font-size: 60px;
+    font-size: 48px;
     color: $black;
   }
   @media (min-width: $md) {
-    h1 {
-      font-size: 100px;
-    }
   }
 }
 </style>

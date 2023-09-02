@@ -7,16 +7,18 @@
     tabindex="0"
   >
     <Banner id="banner" />
+    <Oportunity id="oportunity" />
     <Carousel id="carousel" />
-    <Cards id="cards" />
+    <WhyUs id="whyus" />
     <AboutUs id="about" />
   </div>
 </template>
 
 <script>
 import Banner from '@/components/banner/Banner.vue'
+import Oportunity from '@/components/oportunity/Oportunity.vue'
 import Carousel from '@/components/carousel/Carousel.vue'
-import Cards from '@/components/cards/Cards.vue'
+import WhyUs from '@/components/whyUs/WhyUs.vue'
 import AboutUs from '@/components/aboutUs/AboutUs.vue'
 
 export default {
@@ -25,8 +27,9 @@ export default {
   },
   components: {
     Banner,
+    Oportunity,
     Carousel,
-    Cards,
+    WhyUs,
     AboutUs
   },
   computed: {
