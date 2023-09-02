@@ -17,10 +17,10 @@
             <rect width="100%" height="100%" fill="#777"></rect>
           </svg>
 
-          <h2 class="fw-normal mt-4">Simples e Rápido</h2>
+          <h2 class="fw-normal mt-4">Simplifique sua jornada</h2>
           <p>
-            Acesse a conta e cadastre as vagas, de maneira fluída e intuitiva. Agilizando a busca
-            por recursos.
+            Acesse sua conta e registre oportunidades de emprego de forma fluida e intuitiva,
+            simplificando o processo de busca por talentos qualificados.
           </p>
           <!-- <p><button class="primary m-auto" href="#">View details »</button></p> -->
         </div>
@@ -39,8 +39,11 @@
             <rect width="100%" height="100%" fill="#777"></rect>
           </svg>
 
-          <h2 class="fw-normal mt-4">Mais Opções</h2>
-          <p>Receba mais candidaturas.<br />Haverá menos evasão devido à integração completa.</p>
+          <h2 class="fw-normal mt-4">Aumente seus leads</h2>
+          <p>
+            Aumente o número de candidaturas e reduza a evasão de candidatos devido à nossa
+            integração completa.
+          </p>
           <!-- <p><button class="primary m-auto" href="#">View details »</button></p> -->
         </div>
 
@@ -58,10 +61,10 @@
             <rect width="100%" height="100%" fill="#777"></rect>
           </svg>
 
-          <h2 class="fw-normal mt-4">Possibilidades Melhores</h2>
+          <h2 class="fw-normal mt-4">Seleção com maior efetividade</h2>
           <p>
-            Profissionais mais experientes escolhem mais as vagas e desistem quando o processo é
-            "chato".
+            Profissionais experientes tendem a selecionar vagas com maior critério e podem desistir
+            quando o processo se torna tedioso.
           </p>
           <!-- <p><button class="primary m-auto" href="#">View details »</button></p> -->
         </div>

@@ -8,17 +8,24 @@
         <div class="col-7 d-flex flex-column justify-content-center">
           <h1 class="mb-3">O que nos inspira?</h1>
           <p>
-            Somos dois Devs já com uma boa bagagem e experiência, no decorrer de nossas carreiras
-            nos deparamos com uma situação recorrente e que incomodava ambos no momento de buscar
-            novas oportunidades. Sempre que encontrávamos uma vaga no LinkedIn e para nos candidatar
-            éramos direcionados para outra plataforma, essa plataforma nunca carregava nossas
-            informações já preenchidas no LinkedIn, como experiência profissional e histórico
-            acadêmico.
+            Combinando nossos anos de experiência como desenvolvedores, identificamos uma lacuna
+            notável no processo de candidatura online. Em inúmeras ocasiões, ao depararmos com
+            oportunidades profissionais no LinkedIn, encontramo-nos confrontados com uma
+            ineficiência que nos incomodava profundamente: ao clicar para se candidatar, éramos
+            redirecionados para uma plataforma adicional que não conseguia importar nossos dados já
+            meticulosamente preenchidos no LinkedIn, como nosso histórico acadêmico e experiência
+            profissional.
           </p>
           <p>
-            Diante desse cenário vimos a oportunidade de criar algo que facilite a candidatura, pois
-            boa parte das vezes o candidato pode desistir de ir até o final por ter que ficar
-            repetindo tais informações diversas vezes.
+            Diante dessa realidade, enxergamos uma valiosa oportunidade de inovação. Reconhecemos
+            que essa redundância no fornecimento de informações essenciais durante o processo de
+            candidatura pode ser desencorajadora para os candidatos, levando muitos a desistir antes
+            de completar o processo.
+          </p>
+          <p>
+            Motivados por essa percepção, decidimos criar uma solução que simplificasse
+            significativamente o processo de candidatura, eliminando a necessidade de repetir
+            informações já disponíveis previamente.
           </p>
         </div>
       </div>

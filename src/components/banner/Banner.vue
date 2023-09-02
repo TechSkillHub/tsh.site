@@ -4,13 +4,14 @@
       <div class="row">
         <div class="col-7 d-flex flex-column justify-content-center">
           <h1 class="mb-3">
-            Amplie os resultados da sua empresa fazendo um upgrade no seu time de TI.
+            Potencialize os resultados de sua empresa através do aprimoramento de sua equipe de
+            Tecnologia da Informação (TI).
           </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at leo dolor. Aliquam
-            vulputate porta augue, sed molestie metus pharetra in. Sed ornare aliquam velit eget
-            consectetur. Sed placerat, tellus vel finibus pharetra, ante eros ultricies sapien, quis
-            aliquam neque lacus eu est.
+            A TSH irá auxiliá-lo na obtenção de uma medição mais precisa do desempenho da sua
+            equipe, fornecendo dados personalizados com base no seu método de recrutamento e nos
+            parâmetros da sua equipe. Esses insights valiosos serão fundamentais para impulsionar a
+            aquisição de novos clientes.
           </p>
         </div>
         <div class="col-5">
