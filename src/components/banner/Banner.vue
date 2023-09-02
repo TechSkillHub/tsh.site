@@ -1,8 +1,8 @@
 <template>
   <div class="container-fluid d-flex align-itens-center">
     <div class="container d-flex flex-column justify-content-center">
-      <div class="row">
-        <div class="col-7 d-flex flex-column justify-content-center">
+      <div class="row d-flex flex-column flex-md-row">
+        <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
           <h1 class="mb-3">
             Potencialize os resultados de sua empresa através do aprimoramento de sua equipe de
             Tecnologia da Informação (TI).
@@ -14,7 +14,7 @@
             aquisição de novos clientes.
           </p>
         </div>
-        <div class="col-5">
+        <div class="col-12 col-md-5">
           <img src="./imgs/imgBanner.png" alt="Banner" class="img-fluid" />
         </div>
       </div>
@@ -39,12 +39,15 @@ export default {
   margin-top: 80px;
   padding: 50px 0;
   h1 {
-    font-size: 48px;
+    font-size: 28px;
   }
   p {
     color: $dark-theme;
   }
   @media (min-width: $md) {
+    h1 {
+      font-size: 48px;
+    }
   }
 }
 </style>

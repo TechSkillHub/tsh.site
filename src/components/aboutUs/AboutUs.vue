@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="container">
       <div class="row">
-        <div class="col-12 py-4">
+        <div class="col-12 py-4 flex-md-column">
           <h1>Sobre Nós</h1>
           <p>
             Na Tech Skill Hub, temos a honra de ser pioneiros na transformação do cenário de recrutamento para empresas de outsourcing. Nossa jornada foi moldada por uma paixão compartilhada por dois desenvolvedores experientes, impulsionados pela visão de facilitar e aprimorar o processo de candidatura a empregos online. Nossa história começou com a identificação de um desafio recorrente que afetava não apenas nós, mas também muitos profissionais em busca de novas oportunidades.

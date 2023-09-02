@@ -1,11 +1,11 @@
 <template>
   <div class="container-fluid d-flex align-itens-center">
     <div class="container d-flex flex-column justify-content-center">
-      <div class="row">
-        <div class="col-5">
+      <div class="row d-flex flex-column flex-md-row">
+        <div class="col-12 col-md-5">
           <img src="./imgs/imgOportunity.png" alt="Banner" class="img-fluid" />
         </div>
-        <div class="col-7 d-flex flex-column justify-content-center">
+        <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
           <h1 class="mb-3">O que nos inspira?</h1>
           <p>
             Combinando nossos anos de experiência como desenvolvedores, identificamos uma lacuna
@@ -49,10 +49,13 @@ export default {
   // margin-top: 80px;
   padding: 50px 0;
   h1 {
-    font-size: 48px;
+    font-size: 28px;
     color: $white;
   }
   @media (min-width: $md) {
+    h1 {
+      font-size: 48px;
+    }
   }
 }
 </style>
