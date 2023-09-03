@@ -31,14 +31,6 @@
                 >Home</router-link
               >
             </li>
-            <li class="nav-item">
-              <router-link
-                :to="{ path: '/', hash: '#oportunity' }"
-                class="nav-link"
-                :class="currentPage == '#oportunity' ? 'active' : ''"
-                >Oportunidade</router-link
-              >
-            </li>
             <!-- <li class="nav-item">
               <router-link
                 :to="{ path: '/', hash: '#carousel' }"
@@ -49,12 +41,21 @@
             </li> -->
             <li class="nav-item">
               <router-link
+                :to="{ path: '/', hash: '#oportunity' }"
+                class="nav-link"
+                :class="currentPage == '#oportunity' ? 'active' : ''"
+                >Oportunidade</router-link
+              >
+            </li>
+            <li class="nav-item">
+              <router-link
                 :to="{ path: '/', hash: '#whyus' }"
                 class="nav-link"
                 :class="currentPage == '#whyus' ? 'active' : ''"
                 >Por que a TSH?</router-link
               >
             </li>
+
             <li class="nav-item">
               <router-link
                 :to="{ path: '/', hash: '#about' }"

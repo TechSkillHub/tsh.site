@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid d-flex align-itens-center py-3 py-md-5">
     <div class="container d-flex flex-column justify-content-center text-center">
-      <h1 class="mb-5">Por que a <br class="mobile"/><span>Tech Skill Hub</span>?</h1>
+      <h1 class="mb-5">Por que a <br class="mobile" /><span>Tech Skill Hub</span>?</h1>
       <div class="row justify-content-around">
         <div class="col-lg-3 p-3 card my-3 my-md-0">
           <!-- <svg
@@ -17,7 +17,12 @@
             <rect width="100%" height="100%" fill="#777"></rect>
           </svg> -->
 
-          <img src="./imgs/recruiters-candidate.jpg" alt="Recrutadores" width="140" class="m-auto">
+          <img
+            src="./imgs/recruiters-candidate.jpg"
+            alt="Recrutadores"
+            width="140"
+            class="m-auto"
+          />
 
           <h2 class="fw-normal mt-4">Simplifique sua jornada</h2>
           <p>
@@ -41,7 +46,7 @@
             <rect width="100%" height="100%" fill="#777"></rect>
           </svg> -->
 
-          <img src="./imgs/new-leads.jpg" alt="Leads" width="140" class="mx-auto">
+          <img src="./imgs/new-leads.jpg" alt="Leads" width="140" class="mx-auto" />
 
           <h2 class="fw-normal mt-4">Aumente seus leads</h2>
           <p>
@@ -65,8 +70,7 @@
             <rect width="100%" height="100%" fill="#777"></rect>
           </svg> -->
 
-          <img src="./imgs/user-concept.jpg" alt="Leads" width="140" class="mx-auto">
-
+          <img src="./imgs/user-concept.jpg" alt="Leads" width="140" class="mx-auto" />
 
           <h2 class="fw-normal mt-4">Seleção com maior efetividade</h2>
           <p>

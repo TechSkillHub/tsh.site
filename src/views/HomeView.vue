@@ -7,8 +7,8 @@
     tabindex="0"
   >
     <Banner id="banner" />
-    <Oportunity id="oportunity" />
     <Carousel id="carousel" />
+    <Oportunity id="oportunity" />
     <WhyUs id="whyus" />
     <AboutUs id="about" />
   </div>

@@ -3,8 +3,10 @@
     <footer class="container">
       <div class="row">
         <div class="d-flex flex-column flex-md-row align-items-center">
-          <div class="col-12 col-md-6 mb-3 mb-md-0 text-center text-md-start">
-            <!-- <img src="./imgs/logo.svg" alt="Logo Tech Skill Hub"> -->
+          <div
+            class="col-12 col-md-6 mb-3 mb-md-0 text-center text-md-start d-flex flex-column align-items-center"
+          >
+            <img src="./imgs/logo.svg" class="logo" alt="Logo Tech Skill Hub" />
             <span>Tech Skill Hub © 2023 Company, Inc</span>
           </div>
 
@@ -38,6 +40,11 @@
 <style lang="scss" scoped>
 footer {
   color: $primary;
+  .logo {
+    width: 30px;
+    height: auto;
+    margin-bottom: 10px;
+  }
   img {
     width: 18px;
     height: 20px;
