@@ -55,13 +55,20 @@
                 >Por que a TSH?</router-link
               >
             </li>
-
             <li class="nav-item">
               <router-link
                 :to="{ path: '/', hash: '#about' }"
                 class="nav-link"
                 :class="currentPage == '#about' ? 'active' : ''"
                 >Sobre Nós</router-link
+              >
+            </li>
+            <li class="nav-item">
+              <router-link
+                :to="{ path: '/login', hash: '#login' }"
+                class="nav-link"
+                :class="currentPage == '#login' ? 'active' : ''"
+                >Login</router-link
               >
             </li>
             <!-- <li class="nav-item">

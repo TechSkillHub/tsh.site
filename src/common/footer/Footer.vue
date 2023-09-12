@@ -7,7 +7,7 @@
             class="col-12 col-md-6 mb-3 mb-md-0 text-center text-md-start d-flex flex-column align-items-center"
           >
             <img src="./imgs/logo.svg" class="logo" alt="Logo Tech Skill Hub" />
-            <span>Tech Skill Hub © 2023 Company, Inc</span>
+            <span class="text-center">Tech Skill Hub<br/>©2023 Company, Inc</span>
           </div>
 
           <ul

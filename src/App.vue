@@ -49,6 +49,9 @@ export default {
 
 <style lang="scss">
 @import '@/assets/scss/main.scss';
+#app {
+  padding-top: 80px;
+}
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease-in;

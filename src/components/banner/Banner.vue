@@ -15,7 +15,7 @@
           </p>
         </div>
         <div class="col-12 col-md-5">
-          <img src="./imgs/imgBanner.png" alt="Banner" class="img-fluid" />
+          <img src="./imgs/imgBanner.png" alt="Banner" class="img-fluid w-50" />
         </div>
       </div>
     </div>
@@ -34,9 +34,7 @@ export default {
 <style lang="scss" scoped>
 #banner {
   background-color: $white;
-  // min-height: 80vh;
   color: $primary;
-  margin-top: 80px;
   padding: 50px 0;
   h1 {
     font-size: 28px;
