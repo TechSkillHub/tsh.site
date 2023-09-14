@@ -1,3 +1,24 @@
+form {
+  input {
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid $grey-1;
+    padding: 10px;
+    transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+    &.has-error {
+      border-color: $error;
+      background-color: rgba($error, 0.2);
+    }
+  }
+  span {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    color: $error;
+    font-size: 12px;
+  }
+}
 button {
   &.primary {
     display: block;
@@ -25,10 +46,4 @@ button {
     max-width: fit-content;
   }
 }
-input[type=text] {
-  outline: none;
-  border-radius: 5px;
-  border: 2px solid $grey-1;
-  padding: 10px;
-  margin-bottom: 1em;
-}
+

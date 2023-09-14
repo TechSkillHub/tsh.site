@@ -10,21 +10,27 @@
         <div class="col-6 d-flex justify-content-center align-items-center right">
           <div class="form-login text-center">
             <h1>Acesse suas vagas</h1>
-            <form action="" class="d-flex flex-column p-4">
+            <Form @submit="onSubmit" class="d-flex flex-column p-4">
+
+              <Input
+                nameInput="email"
+                typeInput="email"
+                labelInput="Email"
+                rulesInput="required|email"
+              />
+              <Input
+                nameInput="senha"
+                typeInput="password"
+                labelInput="Senha"
+                rulesInput="required"
+              />
+              
               <div class="row">
-                <label for="username">Email</label>
-                <input type="text">
-              </div>
-              <div class="row">
-                <label for="username">Senha</label>
-                <input type="text">
-              </div>
-              <div class="row">
-                <button class="primary m-auto" @click="acceptCookies()">
+                <button class="primary m-auto">
                   Acessar
                 </button>
               </div>
-            </form>
+            </Form>
           </div>
         </div>
       </div>
@@ -32,8 +38,21 @@
   </div>
 </template>
 <script>
+import Input from './../../components/form/Input.vue'
+
 export default {
-    
+  data() {
+    return {
+    }
+  },
+  components: {
+    Input
+  },
+  methods: {
+    onSubmit(values) {
+      console.log('Submitted', values);
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>
