@@ -1,83 +1,48 @@
 <template>
-  <div class="container-fluid d-flex align-itens-center py-3 py-md-5">
+  <div class="container-fluid d-flex align-itens-center">
     <div class="container d-flex flex-column justify-content-center text-center">
-      <h1 class="mb-5">Por que a <br class="mobile" /><span>Tech Skill Hub</span>?</h1>
+      <h1>Por que a <br class="mobile" /><span>Tech Skill Hub</span>?</h1>
       <div class="row justify-content-around">
-        <div class="col-lg-3 p-3 card my-3 my-md-0">
-          <!-- <svg
-            class="bd-placeholder-img rounded-circle mx-auto"
-            width="140"
-            height="140"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: 140x140"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <rect width="100%" height="100%" fill="#777"></rect>
-          </svg> -->
-
+        <div class="col-10 col-lg-3 p-3 card my-3 my-md-0">
           <img
             src="./imgs/recruiters-candidate.jpg"
             alt="Recrutadores"
-            width="140"
-            class="m-auto"
+            width="230"
+            style="margin: 23px auto !important;"
           />
-
           <h2 class="fw-normal mt-4">Simplifique sua jornada</h2>
-          <p>
+          <p class="mx-auto">
             Acesse sua conta e registre oportunidades de emprego de forma fluida e intuitiva,
             simplificando o processo de busca por talentos qualificados.
           </p>
-          <!-- <p><button class="primary m-auto" href="#">View details »</button></p> -->
         </div>
 
-        <div class="col-lg-3 p-3 card my-3 my-md-0">
-          <!-- <svg
-            class="bd-placeholder-img rounded-circle mx-auto"
-            width="140"
-            height="140"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: 140x140"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <rect width="100%" height="100%" fill="#777"></rect>
-          </svg> -->
-
-          <img src="./imgs/new-leads.jpg" alt="Leads" width="140" class="mx-auto" />
-
+        <div class="col-10 col-lg-3 p-3 card my-3 my-md-0">
+          <img 
+            src="./imgs/new-leads.jpg" 
+            alt="Leads" 
+            width="200" 
+            class="mx-auto" 
+          />
           <h2 class="fw-normal mt-4">Aumente seus leads</h2>
-          <p>
+          <p class="mx-auto">
             Aumente o número de candidaturas e reduza a evasão de candidatos devido à nossa
             integração completa.
           </p>
-          <!-- <p><button class="primary m-auto" href="#">View details »</button></p> -->
         </div>
 
-        <div class="col-lg-3 p-3 card my-3 my-md-0">
-          <!-- <svg
-            class="bd-placeholder-img rounded-circle mx-auto"
-            width="140"
-            height="140"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: 140x140"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          >
-            <rect width="100%" height="100%" fill="#777"></rect>
-          </svg> -->
-
-          <img src="./imgs/user-concept.jpg" alt="Leads" width="140" class="mx-auto" />
-
+        <div class="col-10 col-lg-3 p-3 card my-3 my-md-0">
+          <img 
+            src="./imgs/user-concept.jpg" 
+            alt="Leads" 
+            width="200" 
+            class="mx-auto" 
+          />
           <h2 class="fw-normal mt-4">Seleção com maior efetividade</h2>
-          <p>
+          <p class="mx-auto">
             Profissionais experientes tendem a selecionar vagas com maior critério e podem desistir
             quando o processo se torna tedioso.
           </p>
-          <!-- <p><button class="primary m-auto" href="#">View details »</button></p> -->
         </div>
       </div>
     </div>
@@ -95,12 +60,12 @@ export default {
 
 <style lang="scss" scoped>
 #whyus {
-  background-color: $white;
+  background-color: rgb($primary, 0.2);
+  padding: 120px 0;
   h1 {
     font-size: 36px;
     color: $black;
-    font-weight: 700;
-    margin-top: 20px;
+    font-weight: 500;
     span {
       font-family: 'Audiowide', cursive;
       color: $primary;
@@ -110,16 +75,21 @@ export default {
     color: $primary;
     font-size: 20px;
     font-weight: 500 !important;
+    min-height: 48px;
   }
   .mobile {
     display: block;
   }
   @media (min-width: $md) {
-    h1 {
-      font-size: 48px;
-    }
     .mobile {
       display: none;
+    }
+    h1 {
+      font-size: 68px;
+      margin-bottom: 100px;
+    }
+    p {
+      max-width: 220px;
     }
   }
 }

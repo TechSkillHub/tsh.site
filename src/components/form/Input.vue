@@ -9,6 +9,8 @@
         :placeholder="placeholderInput"
         :class="errors[0] ? 'has-error' : ''"
         @input="handleChange"
+        v-maska
+        :data-maska="maskInput"
       />
       <ErrorMessage :name="nameInput" />
     </Field>
@@ -17,9 +19,13 @@
 
 <script>
 import { toRef } from 'vue';
+import { vMaska } from "maska"
 
 export default {
   name: "Input",
+  directives: { 
+    maska: vMaska 
+  },
   props: {
     typeInput: {
       type: String,
@@ -42,6 +48,10 @@ export default {
       default: "",
     },
     rulesInput: {
+      type: String,
+      default: ""
+    },
+    maskInput: {
       type: String,
       default: ""
     }

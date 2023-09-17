@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav id="header" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <nav id="header" class="navbar navbar-expand-md fixed-top">
       <div class="container">
         <router-link
           class="navbar-brand logo"
@@ -9,6 +9,8 @@
         >
           Tech Skill Hub
         </router-link>
+        <button class="primary inactive mx-2">Pessoal</button>
+        <button class="primary">Empresa</button>
         <button
           class="navbar-toggler"
           type="button"
@@ -28,52 +30,79 @@
                 :to="{ path: '/', hash: '#banner' }"
                 class="nav-link"
                 :class="currentPage == '#banner' ? 'active' : ''"
-                >Home</router-link
-              >
-            </li>
-            <!-- <li class="nav-item">
-              <router-link
-                :to="{ path: '/', hash: '#carousel' }"
-                class="nav-link"
-                :class="currentPage == '#carousel' ? 'active' : ''"
-                >Carousel</router-link
-              >
-            </li> -->
-            <li class="nav-item">
-              <router-link
-                :to="{ path: '/', hash: '#oportunity' }"
-                class="nav-link"
-                :class="currentPage == '#oportunity' ? 'active' : ''"
-                >Oportunidade</router-link
+                >Sobre nós</router-link
               >
             </li>
             <li class="nav-item">
               <router-link
-                :to="{ path: '/', hash: '#whyus' }"
+                :to="{ path: '/', hash: '#banner' }"
                 class="nav-link"
-                :class="currentPage == '#whyus' ? 'active' : ''"
-                >Por que a TSH?</router-link
+                :class="currentPage == '#banner' ? 'active' : ''"
+                >Serviços</router-link
               >
             </li>
             <li class="nav-item">
               <router-link
-                :to="{ path: '/', hash: '#about' }"
+                :to="{ path: '/', hash: '#banner' }"
                 class="nav-link"
-                :class="currentPage == '#about' ? 'active' : ''"
-                >Sobre Nós</router-link
+                :class="currentPage == '#banner' ? 'active' : ''"
+                >Contato</router-link
               >
             </li>
-            <li class="nav-item">
-              <router-link
-                :to="{ path: '/login', hash: '#login' }"
-                class="nav-link"
-                :class="currentPage == '#login' ? 'active' : ''"
-                >Login</router-link
-              >
-            </li>
-            <!-- <li class="nav-item">
-              <a @click="openModal()" class="nav-link">Modal</a>
-            </li> -->
+            <button class="secondary ms-3">Cadastre-se</button>
+            <!-- <div>
+              <li class="nav-item">
+                <router-link
+                  :to="{ path: '/', hash: '#banner' }"
+                  class="nav-link"
+                  :class="currentPage == '#banner' ? 'active' : ''"
+                  >Home</router-link
+                >
+              </li>
+              <li class="nav-item">
+                <router-link
+                  :to="{ path: '/', hash: '#carousel' }"
+                  class="nav-link"
+                  :class="currentPage == '#carousel' ? 'active' : ''"
+                  >Carousel</router-link
+                >
+              </li>
+              <li class="nav-item">
+                <router-link
+                  :to="{ path: '/', hash: '#oportunity' }"
+                  class="nav-link"
+                  :class="currentPage == '#oportunity' ? 'active' : ''"
+                  >Oportunidade</router-link
+                >
+              </li>
+              <li class="nav-item">
+                <router-link
+                  :to="{ path: '/', hash: '#whyus' }"
+                  class="nav-link"
+                  :class="currentPage == '#whyus' ? 'active' : ''"
+                  >Por que a TSH?</router-link
+                >
+              </li>
+              <li class="nav-item">
+                <router-link
+                  :to="{ path: '/', hash: '#about' }"
+                  class="nav-link"
+                  :class="currentPage == '#about' ? 'active' : ''"
+                  >Sobre Nós</router-link
+                >
+              </li>
+              <li class="nav-item">
+                <router-link
+                  :to="{ path: '/login', hash: '#login' }"
+                  class="nav-link"
+                  :class="currentPage == '#login' ? 'active' : ''"
+                  >Login</router-link
+                >
+              </li>
+              <li class="nav-item">
+                <a @click="openModal()" class="nav-link">Modal</a>
+              </li>
+            </div> -->
           </ul>
         </div>
       </div>
@@ -117,11 +146,14 @@ export default {
     }
   }
 }
+nav {
+  background-color: #FAFAFA;
+}
 nav.navbar {
-  padding: 17px 0;
+  padding: 14px 0;
   .logo {
     font-family: 'Audiowide', cursive;
-    font-size: 28px;
+    font-size: 33px;
     color: $primary;
   }
   a {

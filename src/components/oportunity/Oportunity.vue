@@ -2,11 +2,11 @@
   <div class="container-fluid d-flex align-itens-center">
     <div class="container d-flex flex-column justify-content-center">
       <div class="row d-flex flex-column flex-md-row">
-        <div class="col-12 col-md-5">
-          <img src="./imgs/imgOportunity.png" alt="Banner" class="img-fluid" />
+        <div class="col-12 col-md-6 d-flex">
+          <img src="./imgs/imgOportunity.png" alt="Banner" class="img-fluid m-auto" />
         </div>
-        <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
-          <h1 class="mb-3">O que nos inspira?</h1>
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+          <h1 class="mb-5">O que nos inspira?</h1>
           <p>
             Combinando nossos anos de experiência como desenvolvedores, identificamos uma lacuna
             notável no processo de candidatura online. Em inúmeras ocasiões, ao depararmos com
@@ -44,13 +44,18 @@ export default {
 
 <style lang="scss" scoped>
 #oportunity {
-  background-color: $primary;
+  // background-color: $primary;
   color: $black;
   // margin-top: 80px;
-  padding: 50px 0;
+  padding: 150px 0;
   h1 {
     font-size: 28px;
-    color: $white;
+    color: $primary;
+    font-family: 'Audiowide', cursive;
+  }
+  p {
+    line-height: 22px;
+    max-width: 560px;
   }
   @media (min-width: $md) {
     h1 {

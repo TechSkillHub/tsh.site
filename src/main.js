@@ -6,7 +6,6 @@ import interceptors from '@/helpers/interceptors'
 import validations from '@/helpers/validations'
 import { Form, Field, ErrorMessage } from 'vee-validate';
 
-
 // interceptors requests e responses
 interceptors.request()
 interceptors.response()

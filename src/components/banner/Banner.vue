@@ -3,7 +3,7 @@
     <div class="container d-flex flex-column justify-content-center">
       <div class="row d-flex flex-column flex-md-row">
         <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
-          <h1 class="mb-3">
+          <h1 class="mb-4">
             Potencialize os resultados de sua empresa através do aprimoramento de sua equipe de
             Tecnologia da Informação (TI).
           </h1>
@@ -15,7 +15,7 @@
           </p>
         </div>
         <div class="col-12 col-md-5">
-          <img src="./imgs/imgBanner.png" alt="Banner" class="img-fluid w-50" />
+          <img src="./imgs/imgBanner.png" alt="Banner" class="img-fluid w-100" />
         </div>
       </div>
     </div>
@@ -41,10 +41,12 @@ export default {
   }
   p {
     color: $dark-theme;
+    line-height: 22px;
+    max-width: 550px;
   }
   @media (min-width: $md) {
     h1 {
-      font-size: 48px;
+      font-size: 44px;
     }
   }
 }
