@@ -6,7 +6,7 @@
           <img src="./imgs/imgOportunity.png" alt="Banner" class="img-fluid m-auto" />
         </div>
         <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
-          <h1 class="mb-5">O que nos inspira?</h1>
+          <h1 class="my-5 mt-md-0 mb-md-5">O que nos inspira?</h1>
           <p>
             Combinando nossos anos de experiência como desenvolvedores, identificamos uma lacuna
             notável no processo de candidatura online. Em inúmeras ocasiões, ao depararmos com
@@ -44,23 +44,17 @@ export default {
 
 <style lang="scss" scoped>
 #oportunity {
-  // background-color: $primary;
-  color: $black;
-  // margin-top: 80px;
-  padding: 150px 0;
+  color: $dark;
+  padding: 80px 0;
+  text-align: center;
   h1 {
-    font-size: 28px;
-    color: $primary;
-    font-family: 'Audiowide', cursive;
-  }
-  p {
-    line-height: 22px;
-    max-width: 560px;
+    color: $secondary;
+    font-family: $fontLogo;
+    font-weight: unset;
+    line-height: 110%;
   }
   @media (min-width: $md) {
-    h1 {
-      font-size: 48px;
-    }
+    
   }
 }
 </style>

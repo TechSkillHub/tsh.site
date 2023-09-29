@@ -79,7 +79,7 @@ export default {
         font-size: 30px;
       }
       form {
-        border: 1px solid $grey-2;
+        border: 1px solid $grey2;
         border-radius: 5px;
         background-color: $white;
       }

@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="container">
       <div class="row">
-        <div class="col-12 py-4">
+        <div class="col-12">
           <h1 class="mb-4">Sobre Nós</h1>
           <p>
             Na Tech Skill Hub, temos a honra de ser pioneiros na transformação do cenário de
@@ -41,11 +41,10 @@ export default {}
 #about {
   background-color: $primary;
   color: $white;
-  min-height: 50vh;
   display: flex;
   align-items: center;
+  padding: 80px 0;
   h1 {
-    font-size: 48px;
     color: $black;
   }
   @media (min-width: $md) {

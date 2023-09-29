@@ -9,8 +9,8 @@
         >
           Tech Skill Hub
         </router-link>
-        <button class="primary inactive mx-2">Pessoal</button>
-        <button class="primary">Empresa</button>
+        <button class="primary desk mx-2">Candidato</button>
+        <button class="primary desk">Empresa</button>
         <button
           class="navbar-toggler"
           type="button"
@@ -24,85 +24,52 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse" @click="hideMenu()">
+          <div class="mobile mt-3 justify-content-around">
+            <button class="primary">Candidato</button>
+            <button class="primary">Empresa</button>
+          </div>
           <ul class="navbar-nav ms-auto mb-2 mb-md-0">
             <li class="nav-item">
               <router-link
-                :to="{ path: '/', hash: '#banner' }"
+                :to="{ path: '/', hash: '#whyus' }"
                 class="nav-link"
-                :class="currentPage == '#banner' ? 'active' : ''"
+                :class="currentPage == '#whyus' ? 'active' : ''"
+                >Por que?</router-link
+              >
+            </li>
+            <li class="nav-item">
+              <router-link
+                :to="{ path: '/', hash: '#oportunity' }"
+                class="nav-link"
+                :class="currentPage == '#oportunity' ? 'active' : ''"
+                >Inspiração</router-link
+              >
+            </li>
+            <li class="nav-item">
+              <router-link
+                :to="{ path: '/', hash: '#plans' }"
+                class="nav-link"
+                :class="currentPage == '#plans' ? 'active' : ''"
+                >Nossos planos</router-link
+              >
+            </li>
+            <li class="nav-item">
+              <router-link
+                :to="{ path: '/', hash: '#steps' }"
+                class="nav-link"
+                :class="currentPage == '#steps' ? 'active' : ''"
+                >Como funciona?</router-link
+              >
+            </li>
+            <li class="nav-item">
+              <router-link
+                :to="{ path: '/', hash: '#about' }"
+                class="nav-link"
+                :class="currentPage == '#about' ? 'active' : ''"
                 >Sobre nós</router-link
               >
             </li>
-            <li class="nav-item">
-              <router-link
-                :to="{ path: '/', hash: '#banner' }"
-                class="nav-link"
-                :class="currentPage == '#banner' ? 'active' : ''"
-                >Serviços</router-link
-              >
-            </li>
-            <li class="nav-item">
-              <router-link
-                :to="{ path: '/', hash: '#banner' }"
-                class="nav-link"
-                :class="currentPage == '#banner' ? 'active' : ''"
-                >Contato</router-link
-              >
-            </li>
-            <button class="secondary ms-3">Cadastre-se</button>
-            <!-- <div>
-              <li class="nav-item">
-                <router-link
-                  :to="{ path: '/', hash: '#banner' }"
-                  class="nav-link"
-                  :class="currentPage == '#banner' ? 'active' : ''"
-                  >Home</router-link
-                >
-              </li>
-              <li class="nav-item">
-                <router-link
-                  :to="{ path: '/', hash: '#carousel' }"
-                  class="nav-link"
-                  :class="currentPage == '#carousel' ? 'active' : ''"
-                  >Carousel</router-link
-                >
-              </li>
-              <li class="nav-item">
-                <router-link
-                  :to="{ path: '/', hash: '#oportunity' }"
-                  class="nav-link"
-                  :class="currentPage == '#oportunity' ? 'active' : ''"
-                  >Oportunidade</router-link
-                >
-              </li>
-              <li class="nav-item">
-                <router-link
-                  :to="{ path: '/', hash: '#whyus' }"
-                  class="nav-link"
-                  :class="currentPage == '#whyus' ? 'active' : ''"
-                  >Por que a TSH?</router-link
-                >
-              </li>
-              <li class="nav-item">
-                <router-link
-                  :to="{ path: '/', hash: '#about' }"
-                  class="nav-link"
-                  :class="currentPage == '#about' ? 'active' : ''"
-                  >Sobre Nós</router-link
-                >
-              </li>
-              <li class="nav-item">
-                <router-link
-                  :to="{ path: '/login', hash: '#login' }"
-                  class="nav-link"
-                  :class="currentPage == '#login' ? 'active' : ''"
-                  >Login</router-link
-                >
-              </li>
-              <li class="nav-item">
-                <a @click="openModal()" class="nav-link">Modal</a>
-              </li>
-            </div> -->
+            <button class="secondary mx-auto ms-md-3 mt-3 mt-md-0">Cadastre-se</button>
           </ul>
         </div>
       </div>
@@ -139,7 +106,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.desk {
+  display: none !important;
+}
+.mobile {
+  display: flex !important;
+}
 @media (min-width: $md) {
+  .desk {
+    display: block !important;
+  }
+  .mobile {
+    display: none !important;
+  }
   .scroll-hidden {
     #header {
       right: 17px;
@@ -147,7 +126,7 @@ export default {
   }
 }
 nav {
-  background-color: #FAFAFA;
+  background-color: #f4f4f4;
 }
 nav.navbar {
   padding: 14px 0;

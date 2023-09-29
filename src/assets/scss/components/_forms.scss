@@ -2,7 +2,7 @@ form {
   input {
     outline: none;
     border-radius: 5px;
-    border: 2px solid $grey-1;
+    border: 2px solid $grey1;
     padding: 10px;
     transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
@@ -36,7 +36,7 @@ button {
     }
     &.inactive {
       background-color: transparent;
-      color: $grey-2;
+      color: $grey2;
       border: none;
     }
   }

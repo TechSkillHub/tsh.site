@@ -3,10 +3,10 @@
     <div class="container d-flex flex-column justify-content-center">
       <div class="row d-flex flex-column flex-md-row">
         <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
-          <h1 class="mb-4">
+          <h3 class="mb-4">
             Potencialize os resultados de sua empresa através do aprimoramento de sua equipe de
             Tecnologia da Informação (TI).
-          </h1>
+          </h3>
           <p>
             A TSH irá auxiliá-lo na obtenção de uma medição mais precisa do desempenho da sua
             equipe, fornecendo dados personalizados com base no seu método de recrutamento e nos
@@ -34,19 +34,18 @@ export default {
 <style lang="scss" scoped>
 #banner {
   background-color: $white;
-  color: $primary;
   padding: 50px 0;
-  h1 {
-    font-size: 28px;
+  color: $primary;
+  h3 {
+    line-height: 110%;
   }
   p {
-    color: $dark-theme;
-    line-height: 22px;
     max-width: 550px;
+    color: $dark;
   }
   @media (min-width: $md) {
-    h1 {
-      font-size: 44px;
+    h3 {
+      line-height: 150%;
     }
   }
 }

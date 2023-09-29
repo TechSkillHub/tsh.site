@@ -11,6 +11,7 @@
     <!-- <Carousel id="carousel" /> -->
     <Oportunity id="oportunity" />
     <Plans id="plans" />
+    <Steps id="steps" />
     <AboutUs id="about" />
   </div>
 </template>
@@ -21,6 +22,7 @@ import WhyUs from '@/components/whyUs/WhyUs.vue'
 import Oportunity from '@/components/oportunity/Oportunity.vue'
 import Plans from '@/components/plans/Plans.vue'
 // import Carousel from '@/components/carousel/Carousel.vue'
+import Steps from '@/components/steps/Steps.vue'
 import AboutUs from '@/components/aboutUs/AboutUs.vue'
 
 export default {
@@ -33,7 +35,8 @@ export default {
     Oportunity,
     Plans,
     // Carousel,
-    AboutUs
+    Steps,
+    AboutUs,
   },
   computed: {
     currentPage() {

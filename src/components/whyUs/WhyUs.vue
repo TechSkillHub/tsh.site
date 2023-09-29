@@ -10,7 +10,7 @@
             width="230"
             style="margin: 23px auto !important;"
           />
-          <h2 class="fw-normal mt-4">Simplifique sua jornada</h2>
+          <h6 class="mt-4">Simplifique sua jornada</h6>
           <p class="mx-auto">
             Acesse sua conta e registre oportunidades de emprego de forma fluida e intuitiva,
             simplificando o processo de busca por talentos qualificados.
@@ -24,7 +24,7 @@
             width="200" 
             class="mx-auto" 
           />
-          <h2 class="fw-normal mt-4">Aumente seus leads</h2>
+          <h6 class="mt-4">Aumente seus leads</h6>
           <p class="mx-auto">
             Aumente o número de candidaturas e reduza a evasão de candidatos devido à nossa
             integração completa.
@@ -38,7 +38,7 @@
             width="200" 
             class="mx-auto" 
           />
-          <h2 class="fw-normal mt-4">Seleção com maior efetividade</h2>
+          <h6 class="mt-4">Seleção com maior efetividade</h6>
           <p class="mx-auto">
             Profissionais experientes tendem a selecionar vagas com maior critério e podem desistir
             quando o processo se torna tedioso.
@@ -61,21 +61,18 @@ export default {
 <style lang="scss" scoped>
 #whyus {
   background-color: rgb($primary, 0.2);
-  padding: 120px 0;
+  padding: 80px 0;
   h1 {
-    font-size: 36px;
     color: $black;
-    font-weight: 500;
     span {
-      font-family: 'Audiowide', cursive;
+      font-family: $fontLogo;
       color: $primary;
     }
   }
-  h2 {
+  h6 {
     color: $primary;
-    font-size: 20px;
-    font-weight: 500 !important;
     min-height: 48px;
+    line-height: 110%;
   }
   .mobile {
     display: block;
@@ -85,9 +82,11 @@ export default {
       display: none;
     }
     h1 {
-      font-size: 68px;
-      margin-bottom: 100px;
+      margin-bottom: 80px;
     }
+    h6 {
+      min-height: 84px;
+    } 
     p {
       max-width: 220px;
     }
