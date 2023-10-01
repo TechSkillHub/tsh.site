@@ -69,7 +69,7 @@
                 >Sobre nós</router-link
               >
             </li>
-            <button class="secondary mx-auto ms-md-3 mt-3 mt-md-0">Cadastre-se</button>
+            <button class="secondary mx-auto ms-md-3 mt-3 mt-md-0" @click="$router.push({path: '/login', hash: '#login'})">Login/Cadastro</button>
           </ul>
         </div>
       </div>
@@ -131,9 +131,13 @@ nav {
 nav.navbar {
   padding: 14px 0;
   .logo {
-    font-family: 'Audiowide', cursive;
+    font-family: $fontLogo;
     font-size: 33px;
     color: $primary;
+    &::after {
+      content: none !important;
+      text-decoration: none;
+    }
   }
   a {
     width: fit-content;
