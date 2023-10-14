@@ -1,7 +1,10 @@
 <template>
   <Cookies />
   <Transition>
-    <ModalDefault v-if="modalInfo.show" :modalInfo="modalInfo" />
+    <ModalDefault v-if="modalDefault.show" :modalDefault="modalDefault" />
+  </Transition>
+  <Transition>
+    <ModalLogin v-if="modalLogin.show" :modalLogin="modalLogin" />
   </Transition>
   <transition name="fade" mode="out-in">
     <Loading v-if="loading" />
@@ -14,6 +17,7 @@
 <script>
 import Cookies from '@/common/cookies/Cookies.vue'
 import ModalDefault from '@/common/modal/Default.vue'
+import ModalLogin from '@/common/modal/Login.vue'
 import Loading from '@/common/loading/Loading.vue'
 import Header from '@/common/header/Header.vue'
 import Footer from '@/common/footer/Footer.vue'
@@ -26,6 +30,7 @@ export default {
   components: {
     Cookies,
     ModalDefault,
+    ModalLogin,
     Loading,
     Header,
     Footer
@@ -34,8 +39,11 @@ export default {
     loading() {
       return this.$store.state.manager.loading
     },
-    modalInfo() {
+    modalDefault() {
       return this.$store.state.manager.modalDefault
+    },
+    modalLogin() {
+      return this.$store.state.manager.modalLogin
     }
   },
   mounted() {

@@ -3,7 +3,8 @@ export default {
   state: {
     loading: false,
     currentPage: '',
-    modalDefault: {}
+    modalDefault: {},
+    modalLogin: {},
   },
   mutations: {
     SET_CURRENT_PAGE(state, page) {
@@ -14,6 +15,9 @@ export default {
     },
     SET_MODAL_DEFAULT(state, val) {
       state.modalDefault = val
+    },
+    SET_MODAL_LOGIN(state, val) {
+      state.modalLogin = val
     }
   },
   getters: {},

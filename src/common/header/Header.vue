@@ -69,7 +69,7 @@
                 >Sobre nós</router-link
               >
             </li>
-            <button class="secondary mx-auto ms-md-3 mt-3 mt-md-0" @click="$router.push({path: '/login', hash: '#login'})">Login/Cadastro</button>
+            <button class="secondary mx-auto ms-md-3 mt-3 mt-md-0" @click="openModal()">Login/Cadastro</button>
           </ul>
         </div>
       </div>
@@ -89,10 +89,8 @@ export default {
       el.classList.remove('show')
     },
     openModal() {
-      this.$store.commit('manager/SET_MODAL_DEFAULT', {
+      this.$store.commit('manager/SET_MODAL_LOGIN', {
         show: true,
-        title: 'Title Modal',
-        body: 'Body Modal'
       })
     }
   },

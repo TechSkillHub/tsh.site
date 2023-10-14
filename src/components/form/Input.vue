@@ -4,7 +4,7 @@
       <label :for="nameInput" :class="errors[0] ? 'has-error' : ''">{{ labelInput }}</label>
       <input
         v-bind="field" 
-        :type="typeInput" 
+        :type="type" 
         :name="nameInput" 
         :placeholder="placeholderInput"
         :class="errors[0] ? 'has-error' : ''"
@@ -12,7 +12,24 @@
         v-maska
         :data-maska="maskInput"
       />
-      <ErrorMessage :name="nameInput" />
+
+      <!-- <small 
+        v-if="isPassword && type == 'password'"
+        class="hidden-password"
+      >
+        |
+      </small> -->
+      <i 
+        class="fa-solid fa-slash hidden-password"
+        v-if="isPassword && type == 'password'"
+        >
+      </i>
+      <i 
+        v-if="isPassword"
+        class="fa-regular fa-eye" 
+        @click="showHide()">
+      </i>
+      <ErrorMessage :name="nameInput" class="text-start" />
     </Field>
   </div>
 </template>
@@ -54,13 +71,40 @@ export default {
     maskInput: {
       type: String,
       default: ""
+    },
+    isPassword: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props) {
     const nameInput = toRef(props, "nameInput");
+  },
+  data() {
+    return {
+      type: this.typeInput
+    }
+  },
+  methods: {
+    showHide() {
+      this.type = this.type == 'password' ? 'text' : 'password'
+    }
   }
 }
 </script>
-<style lang="">
-  
+<style lang="scss" scoped>
+  i {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    height: 24px;
+    right: 0;
+    top: 32px;
+    color: $grey2;
+  }
+  .hidden-password {
+    position: absolute;
+    right: -1px;
+    top: 32px;
+  }
 </style>
