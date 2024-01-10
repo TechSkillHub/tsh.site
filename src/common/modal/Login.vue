@@ -9,21 +9,27 @@
             <div class="col-12 d-flex justify-content-center align-items-center right">
               <div class="form-login text-center">
                 <h5>Acesse seu <span>Hub</span></h5>
-                <Form @submit="onSubmit" class="d-flex flex-column p-4 position-relative">
+                <Form @submit="submitLogin" class="d-flex flex-column p-4 position-relative">
 
                   <Input
-                    labelInput="Email"
-                    nameInput="email"
+                    labelInput="E-mail"
+                    nameInput="e-mail"
                     typeInput="email"
                     rulesInput="required|email"
+                    placeholderInput="email@exemplo.com.br"
+                    @value="(i) => i.value.length >= 0 ? form.email = i.value : form.email"
+                    :valueInput="form.email"
                   />
 
                   <Input
-                    labelInput="Senha"
-                    nameInput="senha"
-                    typeInput="password"
+                    labelInput="Senha" 
+                    nameInput="Senha" 
+                    typeInput="password" 
                     rulesInput="required"
-                    :isPassword=true
+                    placeholderInput="Insira sua senha" 
+                    :isPassword=true 
+                    @value="(i) => form.password = i.value"
+                    :valueInput="form.password" 
                   />
                   <small>Esqueceu a senha?</small>
                   
@@ -51,7 +57,12 @@ export default {
     }
   },
   data() {
-    return {}
+    return {
+      form: {
+        username: '',
+        password: ''
+      }
+    }
   },
   components: {
     Input
@@ -66,6 +77,14 @@ export default {
   },
   created() {},
   methods: {
+    submitLogin() {
+      let infoLogin = {
+        username: this.form.username.replace(/[^\d]+/g, ''),
+        password: this.form.password
+      }
+      console.log(infoLogin)
+      // login.login(infoLogin)
+    },
     close() {
       this.$store.commit('manager/SET_MODAL_LOGIN', { show: false })
     }

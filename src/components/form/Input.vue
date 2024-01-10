@@ -1,35 +1,42 @@
 <template>
   <div class="row position-relative pb-3 mb-2 mx-0">
-    <Field :name="nameInput" v-slot="{ field, errors, handleChange }" :rules="rulesInput" >
+    <Field :name="nameInput" v-slot="{ field, errors, handleChange }" :rules="rulesInput" :value="valueInput">
       <label :for="nameInput" :class="errors[0] ? 'has-error' : ''">{{ labelInput }}</label>
+      
       <input
-        v-bind="field" 
+        :id="idInput"
+        v-bind="this.$emit('value', field)" 
         :type="type" 
         :name="nameInput" 
         :placeholder="placeholderInput"
         :class="errors[0] ? 'has-error' : ''"
+        @keyup="handleChange"
+        @keydown="event => valueInput = event.target.value"
         @input="handleChange"
         v-maska
         :data-maska="maskInput"
+        :disabled="disabled"
+        :value="valueInput"
       />
-      <i 
-        class="fa-solid fa-slash hidden-password"
+
+      <img
         v-if="isPassword && type == 'password'"
-        >
-      </i>
-      <i 
-        v-if="isPassword"
-        class="fa-regular fa-eye" 
-        @click="showHide()">
-      </i>
-      <ErrorMessage :name="nameInput" class="text-start" />
+        src="./imgs/hide.png"
+        @click="showHide()"
+      />
+      <img
+        v-if="isPassword && type == 'text'"
+        src="./imgs/show.png"
+        @click="showHide()"
+      />
+      <ErrorMessage :name="nameInput" />
     </Field>
   </div>
 </template>
 
 <script>
-import { toRef } from 'vue';
 import { vMaska } from "maska"
+
 
 export default {
   name: "Input",
@@ -37,17 +44,21 @@ export default {
     maska: vMaska 
   },
   props: {
-    typeInput: {
-      type: String,
-      default: "text",
-    },
     valueInput: {
       type: String,
       default: "",
     },
+    typeInput: {
+      type: String,
+      default: "text",
+    },
     nameInput: {
       type: String,
       required: true,
+    },
+    idInput: {
+      type: String,
+      required: false,
     },
     labelInput: {
       type: String,
@@ -68,11 +79,17 @@ export default {
     isPassword: {
       type: Boolean,
       default: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    modelValue: {
+      type: String,
+      default: ''
     }
   },
-  setup(props) {
-    const nameInput = toRef(props, "nameInput");
-  },
+  
   data() {
     return {
       type: this.typeInput
@@ -86,18 +103,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-  i {
+  img {
     cursor: pointer;
     position: absolute;
     width: auto;
     height: 24px;
-    right: 0;
-    top: 32px;
-    color: $grey2;
-  }
-  .hidden-password {
-    position: absolute;
-    right: -1px;
-    top: 32px;
+    right: 5px;
+    top: 30px;
   }
 </style>

@@ -12,11 +12,14 @@ form {
     }
   }
   span {
-    display: block;
+    display: flex;
     position: absolute;
-    bottom: 0;
+    bottom: -15px;
     color: $error;
     font-size: 12px;
+    padding: 0;
+    align-items: baseline;
+    min-height: 30px;
   }
 }
 button {
