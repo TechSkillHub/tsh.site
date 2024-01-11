@@ -12,8 +12,8 @@
             <h1 class="text-center">Faça parte do <span>Hub</span></h1>
             <Form @submit="onSubmit" class="d-flex flex-column p-4 position-relative">
               <div class="row mx-0 typeProfile mb-4">
-                <button :class="form.typeProfile == 'candidate' ? 'active' : ''" @click.prevent="setProfile('candidate')">Candidato</button>
-                <button :class="form.typeProfile == 'employer' ? 'active' : ''" @click.prevent="setProfile('employer')">Empregador</button>
+                <button :class="typeProfile == 'candidate' ? 'active' : ''" @click.prevent="setProfile('candidate')">Candidato</button>
+                <button :class="typeProfile == 'employer' ? 'active' : ''" @click.prevent="setProfile('employer')">Empregador</button>
               </div>
               <Input
                 labelInput="Nome"
@@ -77,8 +77,8 @@ const register = new Register()
 export default {
   data() {
     return {
+      typeProfile: 'candidate',
       form: {
-        typeProfile: 'candidate',
         name: '',
         email: '',
         password: ''
