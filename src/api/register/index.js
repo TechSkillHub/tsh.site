@@ -14,7 +14,7 @@ export default class Register {
     store.commit('manager/SET_LOADING', true)
     return new Promise((resolve, reject) => {
       axios
-        .post(`${import.meta.env.VITE_APP_API_BASE}/PromoshotUser/Register`, data)
+        .post(`${import.meta.env.VITE_APP_API_BASE}/User/Cadastrar`, data)
         .then((resp) => {
           store.commit('manager/SET_LOADING', false)
           store.commit('manager/SET_MODAL_DEFAULT', { 

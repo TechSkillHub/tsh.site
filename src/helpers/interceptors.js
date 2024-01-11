@@ -1,8 +1,8 @@
 import axios from 'axios'
-// import store from '@/store'
+import store from '@/store'
 import router from '@/router'
 
-function exibirAlertas(error) {
+function showAlert(error) {
   console.log('Deu erro', error.request.status)
   if (error.request.status == 401) {
     console.log('Refaça o login')
@@ -11,7 +11,12 @@ function exibirAlertas(error) {
       router.push('/')
     }, 3000)
   } else {
-    console.log('Erro no servidor', error.request)
+    console.log('Erro no servidor', error.response.data)
+    store.commit('manager/SET_MODAL_DEFAULT', {
+      show: true,
+      title: error.response.data.title,
+      body: error.response.data.message
+    })
   }
 }
 
@@ -33,7 +38,7 @@ const response = () => {
   return axios.interceptors.response.use(
     (response) => response,
     (error) => {
-      exibirAlertas(error)
+      showAlert(error)
       return Promise.reject(true)
     }
   )
