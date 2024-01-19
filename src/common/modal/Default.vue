@@ -1,22 +1,22 @@
 <template>
-  <div class="mask" @click="close()">
-    <div id="modalDefault" class="modal d-block show">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5">{{ modalInfo.title }}</h1>
-            <button type="button" class="btn-close" @click="close()"></button>
-          </div>
-          <div class="modal-body">
-            {{ modalInfo.body }}
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" @click="close()">Close</button>
-          </div>
+  <div id="modalDefault" class="modal d-block show">
+    <div class="mask" @click="close()"></div>
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5">{{ modalInfo.title }}</h1>
+          <button type="button" class="btn-close" @click="close()"></button>
+        </div>
+        <div class="modal-body">
+          {{ modalInfo.body }}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" @click="close()">Close</button>
         </div>
       </div>
     </div>
   </div>
+  
 </template>
 <script>
 export default {
@@ -46,6 +46,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 .mask {
-  display: flex;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 </style>

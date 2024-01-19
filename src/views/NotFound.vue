@@ -14,7 +14,7 @@ export default {
   .not-found {
     background-color: $primary;
     color: $white;
-    min-height: calc(100vh - 259px);
+    min-height: calc(100vh - 240px);
     font-weight: 700;
     h1 {
       font-size: 150px;

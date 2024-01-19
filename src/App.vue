@@ -1,7 +1,7 @@
 <template>
   <Cookies />
   <Transition>
-    <ModalDefault v-if="modalDefault.show" :modalDefault="modalDefault" />
+    <ModalDefault v-if="modalDefault.show" :modalInfo="modalDefault" />
   </Transition>
   <Transition>
     <ModalLogin v-if="modalLogin.show" :modalLogin="modalLogin" />

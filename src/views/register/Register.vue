@@ -1,5 +1,5 @@
 <template>
-  <div id="login" class="container-fluid d-flex align-items-center px-0">
+  <div id="register" class="container-fluid d-flex align-items-center px-0">
     <div class="container-md px-0">
       <div class="row flex-column flex-md-row">
         <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center left text-center">
@@ -10,7 +10,7 @@
         <div class="col-12 col-md-6 d-flex justify-content-center align-items-center right">
           <div class="form-login text-center">
             <h1 class="text-center">Faça parte do <span>Hub</span></h1>
-            <Form @submit="onSubmit" class="d-flex flex-column p-4 position-relative">
+            <Form @submit ="onSubmit" class="d-flex flex-column p-4 position-relative">
               <div class="row mx-0 typeProfile mb-4">
                 <button :class="typeProfile == 'candidate' ? 'active' : ''" @click.prevent="setProfile('candidate')">Candidato</button>
                 <button :class="typeProfile == 'employer' ? 'active' : ''" @click.prevent="setProfile('employer')">Empregador</button>
@@ -71,6 +71,8 @@
 <script>
 import Register from './../../api/register/index'
 import Input from './../../components/form/Input.vue'
+import axios from 'axios'
+
 
 const register = new Register()
 
@@ -92,14 +94,6 @@ export default {
     onSubmit() {
       register.register(this.form)
     },
-    // onSubmit(values) {
-    //   let profile = this.typeProfile
-    //   let data = {...values, type: profile}
-      
-    //   register.register(data).then((res) => {
-    //     console.log(res)
-    //   })
-    // },
     setProfile(value) {
       if(value == 'candidate') {
         this.typeProfile = 'candidate'
@@ -112,10 +106,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-#login {
+#register {
   min-height: calc(100vh - 80px);
   color: $white;
-  // background: linear-gradient(180deg, rgba(255,255,255,1) 40%, rgba(0,139,139,1) 40%);
   .left {
     padding: 30px 0;
     h1 {

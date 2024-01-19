@@ -1,20 +1,25 @@
 <template>
-  <div class="mask" v-if="!acceptedCookies">
-    <div class="cookies">
-      <div class="container d-flex flex-column flex-md-row">
-        <p class="text-justify col-12 col-md-9 col-lg-10 m-0">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis lacus eu turpis
-          volutpat, in malesuada mauris sollicitudin. Donec vehicula molestie massa at pellentesque.
-        </p>
-        <div class="col-12 col-md-3 col-lg-2 d-flex">
-          <button class="primary m-auto mt-4 my-md-auto me-md-0" @click="acceptCookies()">
-            Aceitar
-          </button>
+
+<div id="cookies" v-if="!acceptedCookies" class="modal d-block show">
+  <div class="mask" @click="close()"></div>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-10 ">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis lacus eu turpis volutpat, in malesuada mauris sollicitudin. Donec vehicula molestie massa at pellentesque. 
+          </div>
+          <div class="col-2">
+            <button type="button" class="btn primary mx-auto" @click="acceptCookies()">Aceitar</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+  
 </template>
+
 <script>
 export default {
   data() {
@@ -43,16 +48,26 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.cookies {
-  width: 100vw;
-  position: absolute;
-  bottom: 0;
-  border-top: 2px solid $white;
-  background-color: $primary;
-  padding: 40px;
-  p {
-    text-align: justify;
-    font-weight: 500;
+#cookies {
+  .modal-dialog {
+    max-width: none;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+  .modal-content {
+    margin-top: calc(100vh - 130px);
+    border-radius: 0;
+    height: 130px;
   }
 }
+.mask {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 </style>

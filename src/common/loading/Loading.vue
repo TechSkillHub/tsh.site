@@ -17,6 +17,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.mask {
+  z-index: 9999;
+}
 .loader {
   width: 48px;
   height: 48px;

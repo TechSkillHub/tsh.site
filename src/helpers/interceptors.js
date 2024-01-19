@@ -11,11 +11,11 @@ function showAlert(error) {
       router.push('/')
     }, 3000)
   } else {
-    console.log('Erro no servidor', error.response.data)
     store.commit('manager/SET_MODAL_DEFAULT', {
       show: true,
-      title: error.response.data.title,
-      body: error.response.data.message
+      title: "Erro no servidor"
+      // title: error.response.data.title,
+      // body: error.response.data.message
     })
   }
 }
@@ -24,7 +24,7 @@ const request = () => {
   return axios.interceptors.request.use(
     async (config) => {
       const token = localStorage.getItem('token')
-      if (token && config.url != 'https://api.ipify.org') {
+      if (token) {
         config.headers.Authorization = `Bearer ${token}`
       }
       return config

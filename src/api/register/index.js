@@ -9,14 +9,15 @@ export default class Register {
     // newData.append(`Email`, data.email);
     // newData.append(`Password`, data.password);
 
-    console.log(data)
     const newData = {
       nome: data.name,
       email: data.email,
       senha: data.password
     }
+    console.log(newData)
 
     store.commit('manager/SET_LOADING', true)
+    
     return new Promise((resolve, reject) => {
       axios
         .post(`${import.meta.env.VITE_APP_API_BASE}/User/Cadastrar`, newData)
