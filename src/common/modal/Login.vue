@@ -17,8 +17,8 @@
                     typeInput="email"
                     rulesInput="required|email"
                     placeholderInput="email@exemplo.com.br"
-                    @value="(i) => i.value.length >= 0 ? form.email = i.value : form.email"
-                    :valueInput="form.email"
+                    @value="(i) => i.value.length >= 0 ? form.username = i.value : form.username"
+                    :valueInput="form.username"
                   />
 
                   <Input
@@ -49,6 +49,9 @@
 </template>
 <script>
 import Input from './../../components/form/Input.vue'
+import Login from './../../api/login/index'
+
+const login = new Login()
 
 export default {
   props: {
@@ -78,12 +81,7 @@ export default {
   created() {},
   methods: {
     submitLogin() {
-      let infoLogin = {
-        username: this.form.username.replace(/[^\d]+/g, ''),
-        password: this.form.password
-      }
-      console.log(infoLogin)
-      // login.login(infoLogin)
+      login.login(this.form)
     },
     close() {
       this.$store.commit('manager/SET_MODAL_LOGIN', { show: false })

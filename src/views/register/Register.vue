@@ -62,6 +62,10 @@
                   LinkedIn</button>
               </div>
             </Form>
+
+            <button class="primary mx-auto mt-3" @click="onSubmit">
+              Teste
+            </button>
           </div>
         </div>
       </div>
@@ -69,10 +73,8 @@
   </div>
 </template>
 <script>
-import Register from './../../api/register/index'
 import Input from './../../components/form/Input.vue'
-import axios from 'axios'
-
+import Register from './../../api/register/index'
 
 const register = new Register()
 
@@ -109,6 +111,7 @@ export default {
 #register {
   min-height: calc(100vh - 80px);
   color: $white;
+  // background: linear-gradient(180deg, rgba(255,255,255,1) 40%, rgba(0,139,139,1) 40%);
   .left {
     padding: 30px 0;
     h1 {

@@ -4,17 +4,11 @@ import router from "@/router";
 
 export default class Register {
   register(data) {
-    // let newData = new FormData()
-    // newData.append(`Name`, data.name);
-    // newData.append(`Email`, data.email);
-    // newData.append(`Password`, data.password);
-
     const newData = {
       nome: data.name,
       email: data.email,
       senha: data.password
     }
-    console.log(newData)
 
     store.commit('manager/SET_LOADING', true)
     

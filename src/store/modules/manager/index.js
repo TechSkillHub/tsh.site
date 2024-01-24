@@ -5,6 +5,7 @@ export default {
     currentPage: '',
     modalDefault: {},
     modalLogin: {},
+    logged: false,
   },
   mutations: {
     SET_CURRENT_PAGE(state, page) {
@@ -18,7 +19,10 @@ export default {
     },
     SET_MODAL_LOGIN(state, val) {
       state.modalLogin = val
-    }
+    },
+    SET_LOGGED(state) {
+      state.logged = window.localStorage.getItem('token') ? true : false
+    },
   },
   getters: {},
   actions: {}

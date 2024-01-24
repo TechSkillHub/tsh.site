@@ -1,10 +1,10 @@
 <template>
   <Cookies />
   <Transition>
-    <ModalDefault v-if="modalDefault.show" :modalInfo="modalDefault" />
+    <ModalLogin v-if="modalLogin.show" :modalLogin="modalLogin" />
   </Transition>
   <Transition>
-    <ModalLogin v-if="modalLogin.show" :modalLogin="modalLogin" />
+    <ModalDefault v-if="modalDefault.show" :modalInfo="modalDefault" />
   </Transition>
   <transition name="fade" mode="out-in">
     <Loading v-if="loading" />

@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-dark border-top py-5">
-    <footer class="container">
+  <div id="footer" class="bg-dark border-top py-5">
+    <div class="container">
       <div class="row">
         <div class="d-flex flex-column flex-md-row align-items-center">
           <div
@@ -37,15 +37,17 @@
           </ul>
         </div>
       </div>
-    </footer>
+    </div>
   </div>
 </template>
 
 <script></script>
 
 <style lang="scss" scoped>
-footer {
+#footer {
   color: $white;
+  position: relative;
+  z-index: 10;
   .logo {
     width: 30px;
     height: auto;

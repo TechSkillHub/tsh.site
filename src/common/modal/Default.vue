@@ -3,15 +3,15 @@
     <div class="mask" @click="close()"></div>
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header justify-content-center">
           <h1 class="modal-title fs-5">{{ modalInfo.title }}</h1>
           <button type="button" class="btn-close" @click="close()"></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body text-center">
           {{ modalInfo.body }}
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" @click="close()">Close</button>
+          <button type="button" class="btn primary mx-auto" @click="close()">Close</button>
         </div>
       </div>
     </div>

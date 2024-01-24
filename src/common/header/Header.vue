@@ -9,8 +9,8 @@
         >
           Tech Skill Hub
         </router-link>
-        <button class="primary desk mx-2">Candidato</button>
-        <button class="primary desk">Empresa</button>
+        <!-- <button class="primary desk mx-2">Candidato</button>
+        <button class="primary desk">Empresa</button> -->
         <button
           class="navbar-toggler"
           type="button"
@@ -69,7 +69,8 @@
                 >Sobre nós</router-link
               >
             </li>
-            <button class="secondary mx-auto ms-md-3 mt-3 mt-md-0" @click="openModal()">Login/Cadastro</button>
+            <button v-if="!logged" class="primary mx-auto ms-md-3 mt-3 mt-md-0" @click="openLogin()">Login/Cadastro</button>
+            <button v-else class="secondary mx-auto ms-md-3 mt-3 mt-md-0" @click="logout()">Logout</button>
           </ul>
         </div>
       </div>
@@ -82,22 +83,33 @@ export default {
   data() {
     return {}
   },
-  mounted() {},
+  mounted() {
+    if (localStorage.getItem('token')) {
+      this.$store.state.manager.logged = true;
+    }
+  },
   methods: {
     hideMenu() {
       let el = document.getElementById('navbarCollapse')
       el.classList.remove('show')
     },
-    openModal() {
+    openLogin() {
       this.$store.commit('manager/SET_MODAL_LOGIN', {
         show: true,
       })
+    },
+    logout() {
+      localStorage.removeItem('token')
+      this.$store.commit('manager/SET_LOGGED', false)
     }
   },
   computed: {
     currentPage() {
       return this.$store.state.manager.currentPage
-    }
+    },
+    logged() {
+      return this.$store.state.manager.logged
+    },
   },
   watch: {}
 }
