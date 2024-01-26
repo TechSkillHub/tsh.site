@@ -18,3 +18,7 @@ jobs:
         username: ${{ secrets.ftp_user }}
         password: ${{ secrets.ftp_password }}
         server-dir: sitetsh/
+    - name: Installing project dependencies
+    - run: npm install
+    - name: Building the project
+    - run: npm run build
