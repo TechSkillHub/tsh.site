@@ -4,7 +4,7 @@
       <div class="col-2 p-0">
         <div class="sidebar">
           <ul>
-            <li :class="this.section == 'overview' ? 'active' : ''" @click="changeSection('overview')">Overview Z</li>
+            <li :class="this.section == 'overview' ? 'active' : ''" @click="changeSection('overview')">Overview</li>
             <li :class="this.section == 'profile' ? 'active' : ''" @click="changeSection('profile')">Profile</li>
             <li :class="this.section == 'myJobs' ? 'active' : ''" @click="changeSection('myJobs')">My Jobs</li>
             <li :class="this.section == 'submitJobs' ? 'active' : ''" @click="changeSection('submitJobs')">Submit Jobs</li>
