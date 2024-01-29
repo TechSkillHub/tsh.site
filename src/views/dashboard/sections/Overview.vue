@@ -1,6 +1,6 @@
 <template>
   <div id="overview">
-    <h1>Overview (Rodou saporra)</h1>
+    <h1>Overview</h1>
   </div>
 </template>
 

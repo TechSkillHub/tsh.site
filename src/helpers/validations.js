@@ -38,6 +38,15 @@ defineRule('checkbox', value => {
   }
 });
 
+defineRule('file', value => {
+  console.log(value)
+  if (value) {
+    return true;
+  } else {
+    return 'Arquivo obrigatório.';
+  }
+});
+
 defineRule('dateMax', value => {
   let data = new Date(value.split('/').reverse().join('/'));
   if (value.length != 10 || data > new Date() || isNaN(data.getTime())) {

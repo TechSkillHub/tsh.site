@@ -64,3 +64,16 @@ a {
     color: inherit;
   }
 }
+
+// Responsive
+.desk {
+  display: none;
+  @media (min-width: $md) {
+    display: block;
+  }
+}
+.mobile {
+  @media (min-width: $md) {
+    display: none;
+  }
+}

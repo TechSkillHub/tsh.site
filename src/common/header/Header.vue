@@ -24,10 +24,10 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse" @click="hideMenu()">
-          <div class="mobile mt-3 justify-content-around">
+          <!-- <div class="mobile mt-3 justify-content-around">
             <button class="primary">Candidato</button>
             <button class="primary">Empresa</button>
-          </div>
+          </div> -->
           <ul class="navbar-nav ms-auto mb-2 mb-md-0">
             <li class="nav-item">
               <router-link
