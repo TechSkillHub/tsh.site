@@ -55,24 +55,6 @@
   </div> -->
 </template>
 
-<script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-
-const windowWidth = ref(window.innerWidth)
-
-const handleResize = () => {
-    windowWidth.value = window.innerWidth
-}
-
-onMounted(() => {
-    window.addEventListener('resize', handleResize)
-})
-
-onUnmounted(() => {
-    window.removeEventListener('resize', handleResize)
-})
-</script>
-
 <script>
 import Overview from './sections/Overview.vue';
 import Profile from './sections/Profile.vue';
@@ -83,7 +65,7 @@ export default {
   data() {
     return {
       section: 'profile',
-      windowHeight: window.innerWidth
+      windowWidth: window.innerWidth
     }
   },
   components: {
@@ -95,13 +77,17 @@ export default {
   methods: {
     changeSection(value) {
       this.section = value
+    },
+    myEventHandler() {
+      this.windowWidth = window.innerWidth
     }
   },
-  watch: {
-    windowHeight(){
-      this.windowHeight = window.innerWidth
-    }
-  }
+  created() {
+    window.addEventListener("resize", this.myEventHandler);
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.myEventHandler);
+  },
 }
 </script>
 
@@ -146,7 +132,7 @@ export default {
   }
   main {
     margin-left: 0;
-    @media (min-width: $md) {
+    @media (min-width: $lg) {
       margin-left: 20vw;
     }
   }
@@ -156,7 +142,7 @@ export default {
   }
   #sidebar-nav {
     width: 80vw;
-    @media (min-width: $md) {
+    @media (min-width: $lg) {
       width: 20vw;
     }
   }

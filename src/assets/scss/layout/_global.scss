@@ -68,12 +68,12 @@ a {
 // Responsive
 .desk {
   display: none;
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     display: block;
   }
 }
 .mobile {
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     display: none;
   }
 }
