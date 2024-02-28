@@ -1,7 +1,7 @@
 <template>
   <div class="row position-relative pb-3 mb-2 mx-0">
     <Field :name="nameInput" v-slot="{ field, errors, handleChange }" :rules="rulesInput" :value="valueInput">
-      <label :for="nameInput" :class="errors[0] ? 'has-error' : ''">{{ labelInput }}</label>
+      <label class="p-0 fw-bold" :for="nameInput" :class="errors[0] ? 'has-error' : ''">{{ labelInput }}</label>
       
       <input
         :id="idInput"

@@ -1,17 +1,19 @@
 <template>
-  <div class="row position-relative pb-3 mb-2 mx-0">
-    <Field :name="nameInput" v-slot="{ field, errors, handleChange }" :rules="rulesInput" >
+  <div class="row position-relative pb-3 mx-0">
+    <Field :name="nameInput" v-slot="{ field, errors, handleChange }" :rules="rulesInput" :value="valueInput">
       <label :for="nameInput" :class="errors[0] ? 'has-error' : ''">{{ labelInput }}</label>
       <textarea
-        v-bind="field" 
+        v-bind="this.$emit('value', field)"
         :placeholder="placeholderInput"
         :class="errors[0] ? 'has-error' : ''"
         :name="nameInput" 
-        @input="handleChange"
         v-on:keyup="countdown"
-        v-model="mensagem"
+        @keydown="event => valueInput = event.target.value"
+        @input="handleChange"
         rows="5"
         maxlength="500"
+        v-model="mensagem"
+
       ></textarea>
       <small>Máx. de {{ remainingCount }} caracteres.</small>
 
@@ -35,11 +37,11 @@ export default {
     },
     nameInput: {
       type: String,
-      required: true,
+      required: false,
     },
     labelInput: {
       type: String,
-      required: true,
+      required: false,
     },
     placeholderInput: {
       type: String,
@@ -54,13 +56,16 @@ export default {
     return {
       remainingCount: 500,
       maxCount: 500,
-      mensagem: ''
+      mensagem: this.valueInput
     }
   },
   methods: {
     countdown() {
       this.remainingCount = this.maxCount - this.mensagem.length;
     },
+  },
+  mounted() {
+    this.countdown()
   }
 }
 </script>

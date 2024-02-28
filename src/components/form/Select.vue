@@ -1,7 +1,7 @@
 <template>
   <div class="row position-relative pb-3 mb-2 mx-0">
-    <Field :name="nameInput" v-slot="{ field, errors, handleChange }" :rules="rulesInput">
-      <label :for="nameInput" :class="errors[0] ? 'has-error' : ''">{{ labelInput }}</label>
+    <Field :name="nameInput" v-slot="{ field, errors, handleChange }" :rules="rulesInput" :value="defaultValue">
+      <label class="p-0 fw-bold" :for="nameInput" :class="errors[0] ? 'has-error' : ''">{{ labelInput }}</label>
       
       <v-select 
         v-bind="field, this.$emit('value', field)" 
@@ -12,12 +12,14 @@
         :options="optionsInput"
         :searchable="true"
         @change="handleChange"
-        label="nome"        
+        label="nome"  
+        multiple
+        v-model="defaultValue"
       >
         <template v-slot:no-options>Nenhum resultado encontrado.</template>
       </v-select>
 
-      <ErrorMessage :name="nameInput" />
+      <ErrorMessage class="p-0" :name="nameInput" />
     </Field>
   </div>
 </template>
@@ -34,8 +36,8 @@ export default {
   },
   props: {
     valueInput: {
-      type: String,
-      default: "",
+      type: Array,
+      default: [],
     },
     nameInput: {
       type: String,
@@ -61,6 +63,7 @@ export default {
   
   data() {
     return {
+      defaultValue: this.valueInput
     }
   },
   methods: {

@@ -142,6 +142,7 @@ export default {
   }
   #sidebar-nav {
     width: 80vw;
+    height: 100vh;
     @media (min-width: $lg) {
       width: 20vw;
     }

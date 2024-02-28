@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav id="header" class="navbar navbar-expand-md fixed-top">
+    <nav id="header" class="navbar navbar-expand-xl fixed-top">
       <div class="container">
         <router-link
           class="navbar-brand logo"

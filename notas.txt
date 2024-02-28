@@ -1,0 +1,81 @@
+Empresa
+  Perfil
+    Imagens - OK
+      Logo
+      Capa
+    Informações
+      Nome
+      Email
+      Site
+      Segmento (Select)
+      Tamanho (Select)
+      Exibir Perfil (Boolean)
+    Sobre a companhia
+      (Textarea)
+    Redes sociais*
+      Instagram
+      Facebook
+      YouTube
+      LinkedIn
+
+  Vagas
+    Listar Vagas
+      Botão "adicionar vaga"
+      Titulo
+      Número de candidatos
+      Data de criação
+      Status
+      Ações
+        Preechida
+        Editar
+        Excluir
+    Criar vaga
+      Banner Imagem
+      Titulo
+      Descrição (Campo HTML)
+      Informações
+        Categoria (Área)
+        Modelo contratação
+        Média Salarial
+        Qualificações
+        Nivel (Senioridade)
+        Experiência
+        Link externo (LinkedIn)
+  
+  Candidaturas
+    Listar Vagas
+      Titulo
+      Status
+      Total de candidaturas
+      Número de candidatosem cada fase
+      Botão "Ver candidatos"
+    Listar candidatos/vaga
+      Nome
+      Status (Mini timeline das fases)
+      Data da candidatura
+      Ações (Condicionais à cada fase)
+        Criar reunião*
+        Aprovar (Próxima fase)
+        Desfazer aprovação
+        Rejeitar
+        Desfazer rejeição
+        Baixar CV
+        Excluir
+
+  Detalhes candidatos (Dados do LinkedIn)
+    Nome
+    Cargo/profissão
+    Tags (Select)(Não vem do LinkedIn)*
+    Sobre mim
+    Formação acadêmica
+    Experiências
+    Skills/competências
+    Informações
+      Pretenção Salarial
+      Tempo de Experiência
+      Idade
+      Escolaridade
+      Idiomas
+      Email
+      Social Media
+      Curriculo PDF

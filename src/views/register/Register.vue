@@ -62,10 +62,6 @@
                   LinkedIn</button>
               </div>
             </Form>
-
-            <button class="primary mx-auto mt-3" @click="onSubmit">
-              Teste
-            </button>
           </div>
         </div>
       </div>

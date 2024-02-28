@@ -36,7 +36,7 @@ export default {
     },
     labelInput: {
       type: String,
-      required: true,
+      required: false,
     },
     rulesInput: {
       type: String,

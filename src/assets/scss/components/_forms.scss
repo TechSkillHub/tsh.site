@@ -1,5 +1,5 @@
 form {
-  input {
+  input, textarea {
     outline: none;
     border-radius: 5px;
     border: 2px solid $grey1;
@@ -20,6 +20,70 @@ form {
     padding: 0;
     align-items: baseline;
     min-height: 30px;
+  }
+  .v-select {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    &.has-error {
+      .vs__dropdown-toggle {
+        border-color: $error;
+        background-color: rgba($error, 0.2);
+      }
+    }
+    .vs__dropdown-toggle {
+      outline: none;
+      border-radius: 5px;
+      border: 2px solid $grey1;
+      padding: 8px 10px;
+      height: 43px;
+      background-color: $white;
+      transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out,
+      background-color 0.3s ease-in-out;
+      &.has-error {
+        border-color: $error;
+        background-color: rgba($error, 0.2);
+      }
+      .vs__selected-options {
+        padding: 0;
+        color: #757575;
+        display: flex;
+        display: flex;
+        flex-basis: 100%;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        padding: 0 2px;
+        position: relative;
+        span {
+          z-index: 9999;
+          padding: 1px 10px;
+          margin: 0;
+          font-size: 16px;
+          left: -2px;
+          top: -1px;
+          position: relative;
+          min-height: auto;
+          margin-right: 7px;
+          border-radius: 15px;
+        }
+        input {
+          margin: 0;
+        }
+      }
+      .vs__actions {
+        button {
+          margin-top: -5px;
+        }
+      }
+    }
+    .vs__dropdown-menu {
+      border: none;
+      padding-top: 10px;
+    }
+    .vs__search {
+      padding: 0px;
+      z-index: 0;
+    }
   }
 }
 button {

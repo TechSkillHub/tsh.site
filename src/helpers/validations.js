@@ -39,7 +39,6 @@ defineRule('checkbox', value => {
 });
 
 defineRule('file', value => {
-  console.log(value)
   if (value) {
     return true;
   } else {
